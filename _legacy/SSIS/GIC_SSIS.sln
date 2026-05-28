@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "RDL", "RDL\RDL.dtproj", "{94BA189F-1104-4750-8BB4-B276584F7E15}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "InfoGestion", "InfoGestion\InfoGestion.dtproj", "{69E815FE-4167-4887-9E53-A04EE22BD678}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ChargementAEB", "ChargementAEB\ChargementAEB.dtproj", "{7EAD2CF3-0869-4C62-9EE8-B294978867A5}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ExtractionMRQ", "ExtractionMRQ\ExtractionMRQ.dtproj", "{59E94E90-C029-4904-AA30-9D9B212AE7C2}"
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ChargementPST", "ChargementPST\ChargementPST.dtproj", "{F2CB09BF-CA0E-4A54-9B5B-6EDA01BD3EAF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94BA189F-1104-4750-8BB4-B276584F7E15}.Development|Default.ActiveCfg = Development
+		{94BA189F-1104-4750-8BB4-B276584F7E15}.Development|Default.Build.0 = Development
+		{69E815FE-4167-4887-9E53-A04EE22BD678}.Development|Default.ActiveCfg = Development
+		{69E815FE-4167-4887-9E53-A04EE22BD678}.Development|Default.Build.0 = Development
+		{7EAD2CF3-0869-4C62-9EE8-B294978867A5}.Development|Default.ActiveCfg = Development
+		{7EAD2CF3-0869-4C62-9EE8-B294978867A5}.Development|Default.Build.0 = Development
+		{59E94E90-C029-4904-AA30-9D9B212AE7C2}.Development|Default.ActiveCfg = Development
+		{59E94E90-C029-4904-AA30-9D9B212AE7C2}.Development|Default.Build.0 = Development
+		{F2CB09BF-CA0E-4A54-9B5B-6EDA01BD3EAF}.Development|Default.ActiveCfg = Development
+		{F2CB09BF-CA0E-4A54-9B5B-6EDA01BD3EAF}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBC0187E-7923-4F01-B50F-09731605E0A5}
+	EndGlobalSection
+EndGlobal

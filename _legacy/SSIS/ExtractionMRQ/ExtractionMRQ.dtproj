@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <DeploymentModel>Package</DeploymentModel>
+  <ProductVersion>17.0.1016.0</ProductVersion>
+  <SchemaVersion>9.0.1.0</SchemaVersion>
+  <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD50cnVlPC9FbmFibGVkPg0KICA8UHJvamVjdE5hbWU+JC9EU1QvU1NJUy9NYWluPC9Qcm9qZWN0TmFtZT4NCiAgPEF1eFBhdGg+aHR0cDovL3RmczM0Ny5pdHAuZXh0cmE6ODA4MC90ZnMvMzY3PC9BdXhQYXRoPg0KICA8TG9jYWxQYXRoPi4uPC9Mb2NhbFBhdGg+DQogIDxQcm92aWRlcj57NENBNThBQjItMThGQS00RjhELTk1RDQtMzJEREYyN0QxODRDfTwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
+  <Database>
+    <Name>ExtractionMRQ.database</Name>
+    <FullPath>ExtractionMRQ.database</FullPath>
+  </Database>
+  <DataSources />
+  <DataSourceViews />
+  <DeploymentModelSpecificContent>
+    <Manifest>
+      <DTSPackages>
+        <DtsPackage FormatVersion="8">
+          <Name>E206-Extraction_Licence_cinq_ans.dtsx</Name>
+          <FullPath>E206-Extraction_Licence_cinq_ans.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+      </DTSPackages>
+    </Manifest>
+  </DeploymentModelSpecificContent>
+  <ControlFlowParts />
+  <Miscellaneous>
+    <ProjectItem>
+      <Name>Adresses.csv</Name>
+      <FullPath>Adresses.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>AutreNom.csv</Name>
+      <FullPath>AutreNom.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Champs a extraire.xls</Name>
+      <FullPath>Champs a extraire.xls</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Competence.csv</Name>
+      <FullPath>Competence.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>CompetenceUtilisee.csv</Name>
+      <FullPath>CompetenceUtilisee.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DroitExercice.csv</Name>
+      <FullPath>DroitExercice.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HabilitationAccordee.csv</Name>
+      <FullPath>HabilitationAccordee.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>HierarchieRelations.csv</Name>
+      <FullPath>HierarchieRelations.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Interlocuteur.csv</Name>
+      <FullPath>Interlocuteur.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Intervenant.csv</Name>
+      <FullPath>Intervenant.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>LieuxTravaux.csv</Name>
+      <FullPath>LieuxTravaux.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NoteInterlocuteur.csv</Name>
+      <FullPath>NoteInterlocuteur.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>NoteIntervenant.csv</Name>
+      <FullPath>NoteIntervenant.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Produit.csv</Name>
+      <FullPath>Produit.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>SuiviDroitExercice.csv</Name>
+      <FullPath>SuiviDroitExercice.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TypeInterlocuteur.csv</Name>
+      <FullPath>TypeInterlocuteur.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>TypeIntervenant.csv</Name>
+      <FullPath>TypeIntervenant.csv</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>UtilisationAdresse.csv</Name>
+      <FullPath>UtilisationAdresse.csv</FullPath>
+    </ProjectItem>
+  </Miscellaneous>
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <OutputPath>bin</OutputPath>
+        <ConnectionMappings />
+        <ConnectionProviderMappings />
+        <ConnectionSecurityMappings />
+        <DatabaseStorageLocations />
+        <TargetServerVersion>SQLServer2025</TargetServerVersion>
+        <AzureMode>false</AzureMode>
+        <LinkedAzureTenantId />
+        <LinkedAzureAccountId />
+        <LinkedAzureSSISIR />
+        <LinkedAzureStorage />
+        <RemoteExecutionFolder />
+        <ParameterConfigurationValues />
+      </Options>
+    </Configuration>
+  </Configurations>
+</Project>

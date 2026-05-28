@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1300
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "DMU104", "DMU104\DMU104.dtproj", "{699CCD2F-B47C-4F1B-BB6A-BBA7D02E542C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{699CCD2F-B47C-4F1B-BB6A-BBA7D02E542C}.Development|Default.ActiveCfg = Development
+		{699CCD2F-B47C-4F1B-BB6A-BBA7D02E542C}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0701FB0D-FC24-41F2-94C4-B0371A6F73A5}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs347.itp.extra:8080/tfs/367
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DMU104\\DMU104.dtproj
+		SccProjectName1 = DMU104
+		SccLocalPath1 = DMU104
+	EndGlobalSection
+EndGlobal

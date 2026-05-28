@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.36602.28
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ConnecteurHydro_v2", "ConnecteurHydro_v2\ConnecteurHydro_v2.dtproj", "{D3FC298D-7527-40FE-85F0-B1A77850975D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3FC298D-7527-40FE-85F0-B1A77850975D}.Development|Default.ActiveCfg = Development
+		{D3FC298D-7527-40FE-85F0-B1A77850975D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3FB8202-5EA9-4486-BB96-6F524C0BBC28}
+	EndGlobalSection
+EndGlobal

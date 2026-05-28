@@ -1,0 +1,2309 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/30/2024 10:26:34 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="M312512"
+  DTS:CreatorName="MTR\tyeo01"
+  DTS:DTSID="{AF987948-49E8-4E9B-B649-E5EF0CE246B1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="3084"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{02487B8D-E914-443D-860D-26653A3C0F8C}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LicenceDirigeants]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2441050D-EB69-4678-942F-01D28055EBA8}"
+      DTS:ObjectName="LicenceDirigeants">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::DossierSortie] + "\\" +  @[User::FichierSortie2]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3084"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\W367P01SBL1\DonneesSysteme\GIC\GIC_E205_Partenaire\CNESST\Envoi\rbq_ilcnesst01-LicenceDirigeants.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No licence"
+              DTS:DTSID="{4B38A61C-7220-4F4D-ABB9-5D7A3679A2E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="101"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom"
+              DTS:DTSID="{C741E093-54C0-4A39-BF1C-3D8584BF50DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No civique"
+              DTS:DTSID="{033F0545-43BC-42F9-83E4-E879210BF7FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type artère"
+              DTS:DTSID="{60870BF1-CC22-4A05-9CB2-AEF97626FAF1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom rue"
+              DTS:DTSID="{FD651C60-9919-4E5C-A4B0-9985A7EA5C50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No appartement"
+              DTS:DTSID="{23ED6170-438C-461D-93B2-8EC9EEB05A0D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Municipalité"
+              DTS:DTSID="{34F7A6FF-92B3-416D-B949-4D77EE6FA78A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Province"
+              DTS:DTSID="{8B2EEB5F-54A6-4299-B001-39E4B44F99EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pays"
+              DTS:DTSID="{75907EE0-C705-48F9-B0C8-9BC7B4321CC8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Code postal"
+              DTS:DTSID="{D7C2F6BF-0D12-496B-A7F3-F0463EBA87D0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LicencesActives]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E4CC0B13-B62E-42BC-8A22-9B3EE2E28134}"
+      DTS:ObjectName="LicencesActives">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::DossierSortie] + "\\" +  @[User::FichierSortie1]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3084"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\W367P01SBL1\DonneesSysteme\GIC\GIC_E205_Partenaire\CNESST\Envoi\rbq_ilcnesst01-LicencesActives.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NEQ"
+              DTS:DTSID="{8C17D831-4666-4659-AFDD-50914DE5F95F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No licence"
+              DTS:DTSID="{6B5C4293-8308-4373-B564-0E0CF619E0F0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom entrepreneur"
+              DTS:DTSID="{53BFF245-0D88-49A8-8030-0E41FA3000F5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Raison sociale"
+              DTS:DTSID="{5C2278A5-467B-429E-B374-A562865DC720}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Forme juridique"
+              DTS:DTSID="{DDB81197-F1C2-4D98-91CF-3AD1942DD58D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No civique"
+              DTS:DTSID="{4BAB32AB-BB64-4517-9D9F-B793FC7FA289}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Type artère"
+              DTS:DTSID="{B1127D59-CE44-400E-9429-271CACCF15E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Nom rue"
+              DTS:DTSID="{95D48634-1480-449E-A3FD-8D5483DFCA7D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No appartement"
+              DTS:DTSID="{BD58C0A5-2165-462B-B475-D7C36897C0B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Municipalité"
+              DTS:DTSID="{4356D90C-F6D8-4565-ABB4-93DE045CA722}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Province"
+              DTS:DTSID="{6822BA84-FD59-42BE-9BAC-0E1025E0F039}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pays"
+              DTS:DTSID="{438C9FBA-19B1-43AD-9E1C-200170B2614B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Code postal"
+              DTS:DTSID="{81463554-6C83-466B-A4E7-3176BCDA0D66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date début"
+              DTS:DTSID="{C735C8E5-89B7-481F-ABDA-A2291A8BE8DB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date fin"
+              DTS:DTSID="{957C72A2-0C3C-46C8-82D3-80CA07C208B5}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LicSousCategories]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C3E63E5E-7BE3-4CE6-BE94-9C4C1175A0DA}"
+      DTS:ObjectName="LicSousCategories">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::DossierSortie] + "\\" +  @[User::FichierSortie3]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="3084"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\W367P01SBL1\DonneesSysteme\GIC\GIC_E205_Partenaire\CNESST\Envoi\rbq_ilcnesst01-LicSousCategories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="No licence"
+              DTS:DTSID="{01F37116-3852-4F05-8EBA-C11FFFDB2E72}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sous-catégorie"
+              DTS:DTSID="{5C4B407C-453E-41C4-BB17-A9EEABA727C8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Description sous-catégorie"
+              DTS:DTSID="{F0044791-24E0-4AE3-B236-1AE28B2603D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Catégorie"
+              DTS:DTSID="{517DA976-8414-4CF4-9C14-B7D6C33287E3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[siebeldb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4CBEACB1-8E6C-405A-B002-821F4D909FB4}"
+      DTS:ObjectName="siebeldb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=W367P001SQL03\W367P001SQL03B1;Initial Catalog=siebeldb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{4CBEACB1-8E6C-405A-B002-821F4D909FB4}W367D001SQL03\W367D001SQL03B2.siebeldb;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{4D017162-E265-44E4-8B32-C70FFDCB0C01}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="DossierSortie">
+      <DTS:VariableValue
+        DTS:DataType="8">\\W367P01SBL1\DonneesSysteme\GIC\GIC_E205_Partenaire\CNESST\Envoi</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{876A8A18-9349-42C4-8C1C-959A4EA72D67}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FichierSortie1">
+      <DTS:VariableValue
+        DTS:DataType="8">rbq_ilcnesst01-LicencesActives.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D694C4FC-00D5-4D4A-A0D9-5E7DE8641391}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FichierSortie2">
+      <DTS:VariableValue
+        DTS:DataType="8">rbq_ilcnesst01-LicenceDirigeants.csv</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E9CBC8E6-978B-4B1E-A388-DD25F857BC49}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FichierSortie3">
+      <DTS:VariableValue
+        DTS:DataType="8">rbq_ilcnesst01-LicSousCategories.csv</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Conteneur de séquences"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Conteneur de séquences"
+      DTS:DTSID="{62D39E4F-7299-4216-AE6C-1F69D8C842CB}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Conteneur de séquences">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de séquences\Licences actives"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{DAC76C1E-44FD-4F29-AA4D-A174EA9BEB16}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Licences actives"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Conteneur de séquences\Licences actives\LicencesActives"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="3084"
+                  name="LicencesActives"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LicencesActives]"
+                      connectionManagerRefId="Package.ConnectionManagers[LicencesActives]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[NEQ]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="NEQ"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[NEQ]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[NEQ]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[No licence]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="No licence"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[No licence]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Nom entrepreneur]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="Nom entrepreneur"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Nom entrepreneur]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom entrepreneur]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Raison sociale]"
+                          cachedCodepage="1252"
+                          cachedDataType="text"
+                          cachedName="Raison sociale"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Raison sociale]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Raison sociale]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Forme juridique]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Forme juridique"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Forme juridique]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Forme juridique]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[No civique]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="No civique"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[No civique]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No civique]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Type artère]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Type artère"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Type artère]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type artère]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Nom rue]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="Nom rue"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Nom rue]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom rue]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[No appartement]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="No appartement"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[No appartement]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No appartement]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Municipalité]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Municipalité"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Municipalité]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Municipalité]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Province]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Province"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Province]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Province]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Pays]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Pays"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Pays]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pays]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Code postal]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Code postal"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Code postal]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code postal]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Date début]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="Date début"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Date début]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date début]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].Columns[Date fin]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="10"
+                          cachedName="Date fin"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Date fin]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date fin]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[NEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="NEQ" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No licence" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Nom entrepreneur]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Nom entrepreneur" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Raison sociale]"
+                          codePage="1252"
+                          dataType="text"
+                          name="Raison sociale" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Forme juridique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Forme juridique" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No civique" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Type artère" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="Nom rue" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="No appartement" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Municipalité" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Province" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Pays" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Code postal" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Date début]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="Date début" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input].ExternalColumns[Date fin]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="Date fin" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de séquences\Licences actives\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
+	 interv.X_NEQ			AS "NEQ"
+	,lic.AGREE_NUM			AS "No licence"
+	,interv.NAME			AS "Nom entrepreneur"
+	,REPLACE(STUFF((SELECT '|' + an.X_AUTRE_NOM
+					FROM S_ORG_SYN an 
+					WHERE (interv.ROW_ID = an.OU_ID AND an.X_DATE_FIN IS NULL) 
+					FOR XML PATH(''),TYPE).value('(./text())[1]','VARCHAR(MAX)'),1,1,''), ';', ',')
+							AS "Raison sociale"
+	,juri.VAL				AS "Forme juridique"
+    ,a2.ADDR_NUM			AS "No civique"
+    ,artere.VAL				AS "Type artère"
+    ,a2.ADDR				AS "Nom rue"
+    ,a2.ADDR_LINE_3			AS "No appartement"
+    ,a2.CITY				AS "Municipalité"
+    ,prov.VAL				AS "Province"
+    ,a2.COUNTRY				AS "Pays"
+    ,a2.ZIPCODE				AS "Code postal"
+	--,CAST(FORMAT(suivi.EFF_START_DT,'yyyy-MM-dd') AS VARCHAR(10))	AS "Date début"
+	,CAST(FORMAT(lic.APPR_DT,'yyyy-MM-dd') AS VARCHAR(10))			AS "Date début"
+	,CAST(FORMAT(suivi.EFF_END_DT,'yyyy-MM-dd') AS VARCHAR(10))		AS "Date fin"
+
+FROM S_ORG_EXT interv
+INNER JOIN S_DOC_AGREE lic
+	ON interv.ROW_ID = lic.TARGET_OU_ID
+	AND lic.AGREE_CD = 'Entrepreneur'
+INNER JOIN S_ENTLMNT suivi
+	ON suivi.ROW_ID = lic.X_PR_ENTLMNT_ID
+	AND (suivi.X_STATUS IN ('Actif') OR suivi.EFF_END_DT &gt;= DATEADD(month, -1, GETDATE()))
+	AND (suivi.X_RAISON_FIN IS NULL OR suivi.X_RAISON_FIN NOT IN ('Erreur administrative'))
+LEFT OUTER JOIN S_CON_ADDR a1
+	ON interv.ROW_ID = a1.ACCNT_ID AND a1.ADDR_TYPE_CD = 'Principale' AND a1.END_DT IS NULL
+INNER JOIN S_ADDR_PER a2
+	ON a1.ADDR_PER_ID = a2.ROW_ID
+LEFT OUTER JOIN S_LST_OF_VAL artere 
+	ON a2.X_ARTERE = artere.NAME AND artere.TYPE = 'ADDR_ARTERE'
+LEFT OUTER JOIN S_LST_OF_VAL prov 
+	ON a2.STATE = prov.NAME AND prov.TYPE = 'RBQ_ADR_PROV'
+LEFT OUTER JOIN S_LST_OF_VAL juri
+	ON interv.OU_TYPE_CD = juri.NAME AND juri.TYPE = 'ACCOUNT_TYPE' AND juri.LANG_ID = 'FRA'
+
+ORDER BY
+	interv.X_NEQ ASC,
+	lic.AGREE_NUM ASC</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[siebeldb]"
+                      connectionManagerRefId="Package.ConnectionManagers[siebeldb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[NEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NEQ]"
+                          length="10"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[NEQ]"
+                          name="NEQ"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No licence]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]"
+                          name="No licence"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom entrepreneur]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom entrepreneur]"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom entrepreneur]"
+                          name="Nom entrepreneur"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Raison sociale]"
+                          codePage="1252"
+                          dataType="text"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Raison sociale]"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Raison sociale]"
+                          name="Raison sociale"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Forme juridique]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Forme juridique]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Forme juridique]"
+                          name="Forme juridique"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No civique]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No civique]"
+                          name="No civique"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type artère]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type artère]"
+                          name="Type artère"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom rue]"
+                          length="200"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom rue]"
+                          name="Nom rue"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No appartement]"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[No appartement]"
+                          name="No appartement"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Municipalité]"
+                          length="50"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Municipalité]"
+                          name="Municipalité"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Province]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Province]"
+                          name="Province"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pays]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pays]"
+                          name="Pays"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Code postal]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code postal]"
+                          name="Code postal"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date début]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date début]"
+                          length="10"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date début]"
+                          name="Date début"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date fin]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date fin]"
+                          length="10"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date fin]"
+                          name="Date fin"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[NEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="NEQ" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No licence" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom entrepreneur]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Nom entrepreneur" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Raison sociale]"
+                          codePage="1252"
+                          dataType="text"
+                          name="Raison sociale" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Forme juridique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Forme juridique" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No civique" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Type artère" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="Nom rue" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="No appartement" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Municipalité" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Province" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Pays" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Code postal" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date début]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="Date début" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date fin]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          name="Date fin" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[NEQ]"
+                          name="NEQ" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No licence]"
+                          name="No licence" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom entrepreneur]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom entrepreneur]"
+                          name="Nom entrepreneur" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Raison sociale]"
+                          codePage="1252"
+                          dataType="text"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Raison sociale]"
+                          name="Raison sociale" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Forme juridique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Forme juridique]"
+                          name="Forme juridique" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No civique]"
+                          name="No civique" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Type artère]"
+                          name="Type artère" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom rue]"
+                          name="Nom rue" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No appartement]"
+                          name="No appartement" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Municipalité]"
+                          name="Municipalité" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Province]"
+                          name="Province" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pays]"
+                          name="Pays" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Code postal]"
+                          name="Code postal" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date début]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date début]"
+                          name="Date début" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date fin]"
+                          codePage="1252"
+                          dataType="str"
+                          length="10"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date fin]"
+                          name="Date fin" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Conteneur de séquences\Licences actives.Paths[OLE DB Source Output]"
+                  endId="Package\Conteneur de séquences\Licences actives\LicencesActives.Inputs[Flat File Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Conteneur de séquences\Licences actives\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de séquences\Licences dirigeants"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{3EBD3AFD-E874-491E-B86B-8C34FDC3BC37}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Licences dirigeants"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="3084"
+                  name="LicenceDirigeants"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LicenceDirigeants]"
+                      connectionManagerRefId="Package.ConnectionManagers[LicenceDirigeants]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[No licence]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="No licence"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[No licence]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[Nom]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="101"
+                          cachedName="Nom"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Nom]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[No civique]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="No civique"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[No civique]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No civique]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[Type artère]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Type artère"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Type artère]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type artère]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[Nom rue]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="200"
+                          cachedName="Nom rue"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Nom rue]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom rue]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[No appartement]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="No appartement"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[No appartement]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No appartement]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[Municipalité]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Municipalité"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Municipalité]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Municipalité]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[Province]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Province"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Province]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Province]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[Pays]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Pays"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Pays]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pays]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].Columns[Code postal]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Code postal"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Code postal]"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code postal]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No licence" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Nom]"
+                          codePage="1252"
+                          dataType="str"
+                          length="101"
+                          name="Nom" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No civique" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Type artère" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="Nom rue" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="No appartement" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Municipalité" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Province" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Pays" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input].ExternalColumns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Code postal" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT
+	 lic.AGREE_NUM						AS "No licence"
+	,c.FST_NAME + ' ' + c.LAST_NAME 	AS "Nom"
+	,a2.ADDR_NUM						AS "No civique"
+    ,artere.VAL							AS "Type artère"
+    ,a2.ADDR							AS "Nom rue"
+    ,a2.ADDR_LINE_3						AS "No appartement"
+    ,a2.CITY							AS "Municipalité"
+    ,prov.VAL							AS "Province"
+    ,a2.COUNTRY							AS "Pays"
+    ,a2.ZIPCODE							AS "Code postal"
+
+FROM S_ORG_EXT interv
+INNER JOIN S_DOC_AGREE lic
+	ON interv.ROW_ID = lic.TARGET_OU_ID
+	AND lic.AGREE_CD = 'Entrepreneur'
+INNER JOIN S_ENTLMNT suivi
+	ON suivi.ROW_ID = lic.X_PR_ENTLMNT_ID
+	AND (suivi.X_STATUS IN ('Actif') OR suivi.EFF_END_DT &gt;= DATEADD(month, -1, GETDATE()))
+	AND (suivi.X_RAISON_FIN IS NULL OR suivi.X_RAISON_FIN NOT IN ('Erreur administrative'))
+INNER JOIN S_PARTY_REL rel
+	ON interv.ROW_ID = rel.PARTY_ID
+	AND rel.END_DT IS NULL
+	AND rel.REL_TYPE_CD IN ('Dirigeant', 'Repondant entrepreneur')
+INNER JOIN S_CONTACT c
+	ON rel.REL_PARTY_ID = c.ROW_ID
+
+LEFT OUTER JOIN S_CON_ADDR a1
+	ON c.ROW_ID = a1.CONTACT_ID AND a1.ADDR_TYPE_CD = 'Principale' AND a1.END_DT IS NULL
+INNER JOIN S_ADDR_PER a2
+	ON a1.ADDR_PER_ID = a2.ROW_ID
+LEFT OUTER JOIN S_LST_OF_VAL artere 
+	ON a2.X_ARTERE = artere.NAME AND artere.TYPE = 'ADDR_ARTERE'
+LEFT OUTER JOIN S_LST_OF_VAL prov 
+	ON a2.STATE = prov.NAME AND prov.TYPE = 'RBQ_ADR_PROV'</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[siebeldb]"
+                      connectionManagerRefId="Package.ConnectionManagers[siebeldb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No licence]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]"
+                          name="No licence"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom]"
+                          length="101"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom]"
+                          name="Nom"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No civique]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No civique]"
+                          name="No civique"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type artère]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Type artère]"
+                          name="Type artère"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom rue]"
+                          length="200"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nom rue]"
+                          name="Nom rue"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No appartement]"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[No appartement]"
+                          name="No appartement"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Municipalité]"
+                          length="50"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Municipalité]"
+                          name="Municipalité"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Province]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Province]"
+                          name="Province"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pays]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Pays]"
+                          name="Pays"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Code postal]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].Columns[Code postal]"
+                          name="Code postal"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No licence" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom]"
+                          codePage="1252"
+                          dataType="str"
+                          length="101"
+                          name="Nom" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No civique" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Type artère" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          name="Nom rue" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="No appartement" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="Municipalité" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Province" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Pays" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Code postal" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No licence]"
+                          name="No licence" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom]"
+                          codePage="1252"
+                          dataType="str"
+                          length="101"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom]"
+                          name="Nom" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No civique]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No civique]"
+                          name="No civique" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Type artère]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Type artère]"
+                          name="Type artère" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom rue]"
+                          codePage="1252"
+                          dataType="str"
+                          length="200"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nom rue]"
+                          name="Nom rue" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No appartement]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No appartement]"
+                          name="No appartement" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Municipalité]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Municipalité]"
+                          name="Municipalité" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Province]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Province]"
+                          name="Province" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pays]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Pays]"
+                          name="Pays" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Code postal]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Code postal]"
+                          name="Code postal" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Conteneur de séquences\Licences dirigeants.Paths[OLE DB Source Output]"
+                  endId="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants.Inputs[Flat File Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de séquences\Licences sous-catégories"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{BD3C57AC-50FF-440F-B874-81B3729B8F79}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Licences sous-catégories"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories"
+                  componentClassID="Microsoft.FlatFileDestination"
+                  contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Destination"
+                  localeId="3084"
+                  name="LicSousCategories"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether the data will overwrite or append to the destination file."
+                      name="Overwrite">true</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the text to write to the destination file before any data is written."
+                      expressionType="Notify"
+                      name="Header" />
+                    <property
+                      dataType="System.Boolean"
+                      description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                      name="EscapeQualifier">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LicSousCategories]"
+                      connectionManagerRefId="Package.ConnectionManagers[LicSousCategories]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input]"
+                      hasSideEffects="true"
+                      name="Flat File Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].Columns[No licence]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="No licence"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[No licence]"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].Columns[Sous-catégorie]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="100"
+                          cachedName="Sous-catégorie"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[Sous-catégorie]"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sous-catégorie]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].Columns[Description sous-catégorie]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="255"
+                          cachedName="Description sous-catégorie"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[Description sous-catégorie]"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description sous-catégorie]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].Columns[Catégorie]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="Catégorie"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[Catégorie]"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Catégorie]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No licence" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[Sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Sous-catégorie" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[Description sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="Description sous-catégorie" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input].ExternalColumns[Catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Catégorie" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="OLE DB Source"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT
+	 lic.AGREE_NUM			AS "No licence"
+	,prod.NAME				AS "Sous-catégorie"
+	,prod.DESC_TEXT			AS "Description sous-catégorie"
+	,lic.X_CATEGORIE		AS "Catégorie"
+
+FROM S_ORG_EXT interv
+INNER JOIN S_DOC_AGREE lic
+	ON interv.ROW_ID = lic.TARGET_OU_ID
+	AND lic.AGREE_CD = 'Entrepreneur'
+INNER JOIN S_ENTLMNT suivi
+	ON suivi.ROW_ID = lic.X_PR_ENTLMNT_ID
+	AND (suivi.X_STATUS IN ('Actif') OR suivi.EFF_END_DT &gt;= DATEADD(month, -1, GETDATE()))
+	AND (suivi.X_RAISON_FIN IS NULL OR suivi.X_RAISON_FIN NOT IN ('Erreur administrative'))
+
+INNER JOIN S_ENTLMNT_ITEM item
+	ON suivi.ROW_ID = item.DOC_AGREE_ID AND item.X_STATUS_CD IN ('Active', 'Partielle')
+INNER JOIN S_PROD_INT prod
+	ON item.PROD_INT_ID = prod.ROW_ID AND prod.NAME NOT IN ('ADM', 'GPC', 'GPCCOP', 'SECCOP',  'SEC')
+
+ORDER BY
+	lic.AGREE_NUM ASC,
+	prod.NAME ASC</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[siebeldb]"
+                      connectionManagerRefId="Package.ConnectionManagers[siebeldb]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No licence]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[No licence]"
+                          name="No licence"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sous-catégorie]"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sous-catégorie]"
+                          name="Sous-catégorie"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Description sous-catégorie]"
+                          length="255"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Description sous-catégorie]"
+                          name="Description sous-catégorie"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Catégorie]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].Columns[Catégorie]"
+                          name="Catégorie"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="No licence" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          name="Sous-catégorie" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Description sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          name="Description sous-catégorie" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="Catégorie" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No licence]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[No licence]"
+                          name="No licence" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="100"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sous-catégorie]"
+                          name="Sous-catégorie" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Description sous-catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="255"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Description sous-catégorie]"
+                          name="Description sous-catégorie" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Catégorie]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Catégorie]"
+                          name="Catégorie" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Conteneur de séquences\Licences sous-catégories.Paths[OLE DB Source Output]"
+                  endId="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories.Inputs[Flat File Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte]"
+          DTS:CreationName=""
+          DTS:DTSID="{4AF363EF-3E53-4E62-A5AF-CB29FA224AE3}"
+          DTS:From="Package\Conteneur de séquences\Licences actives"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Contrainte"
+          DTS:To="Package\Conteneur de séquences\Licences dirigeants" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{AE2DABD6-A113-44A4-801B-38E483C6ED4F}"
+          DTS:From="Package\Conteneur de séquences\Licences dirigeants"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Contrainte 1"
+          DTS:To="Package\Conteneur de séquences\Licences sous-catégories" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Conteneur de séquences\Licences actives"
+          TopLeft="63,53" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\Conteneur de séquences\Licences dirigeants"
+          TopLeft="269,54" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Conteneur de séquences\Licences sous-catégories"
+          TopLeft="479,52" />
+        <EdgeLayout
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte]"
+          TopLeft="223,74.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="46,0"
+              Start="0,0"
+              End="38.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="38.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte 1]"
+          TopLeft="442,74">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37,0"
+              Start="0,0"
+              End="29.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="771,163"
+          Size="771,206"
+          Id="Package\Conteneur de séquences"
+          TopLeft="80,57" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Conteneur de séquences\Licences actives">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Conteneur de séquences\Licences actives\OLE DB Source"
+          TopLeft="110,56" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Conteneur de séquences\Licences actives\LicencesActives"
+          TopLeft="111,186" />
+        <EdgeLayout
+          Id="Package\Conteneur de séquences\Licences actives.Paths[OLE DB Source Output]"
+          TopLeft="189.25,98">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,88"
+              Start="0,0"
+              End="0,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de séquences\Licences actives\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Conteneur de séquences\Licences dirigeants">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Conteneur de séquences\Licences dirigeants\LicenceDirigeants"
+          TopLeft="68,151" />
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source"
+          TopLeft="75,38" />
+        <EdgeLayout
+          Id="Package\Conteneur de séquences\Licences dirigeants.Paths[OLE DB Source Output]"
+          TopLeft="152.5,80">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71"
+              Start="0,0"
+              End="0,63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de séquences\Licences dirigeants\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Conteneur de séquences\Licences sous-catégories">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="157,42"
+          Id="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source"
+          TopLeft="85,50" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Conteneur de séquences\Licences sous-catégories\LicSousCategories"
+          TopLeft="78,175" />
+        <EdgeLayout
+          Id="Package\Conteneur de séquences\Licences sous-catégories.Paths[OLE DB Source Output]"
+          TopLeft="163.5,92">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,83"
+              Start="0,0"
+              End="0,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de séquences\Licences sous-catégories\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

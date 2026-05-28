@@ -1,0 +1,78 @@
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Runtime;
+using System.Windows.Forms;
+using System.Net.Mail;
+
+
+public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+{
+    public void Main()
+    {
+        try
+        {
+            string errorDesc = Dts.Variables["System::ErrorDescription"].Value.ToString();
+            string taskName = Dts.Variables["System::SourceName"].Value.ToString();
+
+            SendMailPlantage(taskName, errorDesc);
+        }
+        catch (Exception ex)
+        {
+            // Ignore
+        }
+
+        Dts.TaskResult = (int)ScriptResults.Success;
+    }
+
+    private void SendMailPlantage(string taskName, string errorDesc)
+    {
+        string newLine = Environment.NewLine;
+        string strDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        string packageName = "Chargement_Global_IG";
+
+        string SmtpServer = "entree34.moe.qc";
+        string EnvoyePar = "alertage.etl.app@rbq.gouv.qc.ca";
+        string EnvoisCourrielA = "alertage.etl.app@rbq.gouv.qc.ca";
+        string EnvoisCourrielSuject = "⚠️ TEST - " + packageName + " - Interruption détectée";
+
+        string sectionSimple = "Bonjour," + newLine + newLine +
+            "Le package " + packageName + " en intégration a rencontré un problème technique et ne fonctionne pas actuellement." + newLine + newLine +
+            "Date/Heure : " + strDate + newLine +
+            "Impact : Les données ne sont pas mises à jour" + newLine + newLine +
+            "L'équipe informatique intervient pour régler la situation." + newLine + newLine +
+            "...";
+
+        string sectionTechnique = newLine + newLine +
+            "---------------------------------------------------------------------" + newLine +
+            "INFORMATIONS TECHNIQUES (pour equipe ETL)" + newLine +
+            "---------------------------------------------------------------------" + newLine + newLine +
+            "Package SSIS : " + packageName + " (INTEGRATION)" + newLine +
+            "Tâche en erreur : " + taskName + newLine +
+            "Erreur : " + errorDesc + newLine + newLine;
+
+        string EnvoisCourrielCorps = sectionSimple + sectionTechnique +
+            "Division Intelligence Numerique" + newLine +
+            "Régie du bâtiment du Québec";
+
+        try
+        {
+            MailMessage mail = new MailMessage(EnvoyePar, EnvoisCourrielA, EnvoisCourrielSuject, EnvoisCourrielCorps);
+
+            SmtpClient smtp = new SmtpClient(SmtpServer);
+            smtp.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+            smtp.Send(mail);
+        }
+        catch
+        {
+            // Ignore
+        }
+    }
+
+    #region ScriptResults declaration
+    enum ScriptResults
+    {
+        Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+        Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+    };
+    #endregion
+}

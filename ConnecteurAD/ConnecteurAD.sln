@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ConnecteurAD", "ConnecteurAD\ConnecteurAD.dtproj", "{2905CD5D-479A-45FC-96A5-E0D3EE415C01}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2905CD5D-479A-45FC-96A5-E0D3EE415C01}.Development|Default.ActiveCfg = Development
+		{2905CD5D-479A-45FC-96A5-E0D3EE415C01}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F770C489-57AF-4465-A5AD-C9FBC03C9C2E}
+	EndGlobalSection
+EndGlobal

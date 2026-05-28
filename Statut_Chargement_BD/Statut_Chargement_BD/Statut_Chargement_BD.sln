@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Statut_Chargement_BD", "Statut_Chargement_BD\Statut_Chargement_BD.dtproj", "{B3EAF472-127E-42A3-B6A8-078D022EA449}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3EAF472-127E-42A3-B6A8-078D022EA449}.Development|Default.ActiveCfg = Development
+		{B3EAF472-127E-42A3-B6A8-078D022EA449}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05067BB8-1945-4906-BEDD-34E792ED8BCE}
+	EndGlobalSection
+EndGlobal

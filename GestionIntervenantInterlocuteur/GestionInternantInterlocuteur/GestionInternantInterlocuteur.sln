@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "GestionInternantInterlocuteur", "GestionInternantInterlocuteur\GestionInternantInterlocuteur.dtproj", "{515D0B39-B9C0-441F-AB53-993A0540C7FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{515D0B39-B9C0-441F-AB53-993A0540C7FE}.Development|Default.ActiveCfg = Development
+		{515D0B39-B9C0-441F-AB53-993A0540C7FE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4E3C5230-E0A0-422F-9CF4-71869A496D89}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "ServiceVerificationEnquete", "ServiceVerificationEnquete\ServiceVerificationEnquete.dtproj", "{290FEADB-45F0-4917-A489-E6FE3E520998}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{290FEADB-45F0-4917-A489-E6FE3E520998}.Development|Default.ActiveCfg = Development
+		{290FEADB-45F0-4917-A489-E6FE3E520998}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E8CB3AC-6AB1-47E1-9817-42EF8AD3BEA5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "Z:\\Intelligence_numerique\\RBQ_Dev\\GestionIntervenantInterlocuteur\\GestionInternantInterlocuteur\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{515D0B39-B9C0-441F-AB53-993A0540C7FE}|GestionInternantInterlocuteur\\GestionInternantInterlocuteur.dtproj|Z:\\Intelligence_numerique\\RBQ_Dev\\GestionIntervenantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteurProd.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{515D0B39-B9C0-441F-AB53-993A0540C7FE}|GestionInternantInterlocuteur\\GestionInternantInterlocuteur.dtproj|solutionrelative:GestionInternantInterlocuteur\\GestionInternantInterlocuteurProd.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{515D0B39-B9C0-441F-AB53-993A0540C7FE}|GestionInternantInterlocuteur\\GestionInternantInterlocuteur.dtproj|Z:\\Intelligence_numerique\\RBQ_Dev\\GestionIntervenantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteurInteg.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{515D0B39-B9C0-441F-AB53-993A0540C7FE}|GestionInternantInterlocuteur\\GestionInternantInterlocuteur.dtproj|solutionrelative:GestionInternantInterlocuteur\\GestionInternantInterlocuteurInteg.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GestionInternantInterlocuteurProd.dtsx [Design]",
+              "DocumentMoniker": "Z:\\Intelligence_numerique\\RBQ_Dev\\GestionIntervenantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteurProd.dtsx",
+              "RelativeDocumentMoniker": "GestionInternantInterlocuteur\\GestionInternantInterlocuteurProd.dtsx",
+              "ToolTip": "Z:\\Intelligence_numerique\\RBQ_Dev\\GestionIntervenantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteurProd.dtsx [Design]",
+              "RelativeToolTip": "GestionInternantInterlocuteur\\GestionInternantInterlocuteurProd.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-30T16:48:58.553Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GestionInternantInterlocuteurInteg.dtsx [Design]",
+              "DocumentMoniker": "Z:\\Intelligence_numerique\\RBQ_Dev\\GestionIntervenantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteurInteg.dtsx",
+              "RelativeDocumentMoniker": "GestionInternantInterlocuteur\\GestionInternantInterlocuteurInteg.dtsx",
+              "ToolTip": "Z:\\Intelligence_numerique\\RBQ_Dev\\GestionIntervenantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteur\\GestionInternantInterlocuteurInteg.dtsx [Design]",
+              "RelativeToolTip": "GestionInternantInterlocuteur\\GestionInternantInterlocuteurInteg.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-30T16:47:31.046Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

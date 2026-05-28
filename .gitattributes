@@ -1,0 +1,7 @@
+* text=auto
+*.cs text eol=crlf
+*.sql text eol=crlf
+*.md text eol=lf
+*.csv text eol=crlf
+*.dtsx text eol=crlf
+*.dtproj text eol=crlf

@@ -1,0 +1,2291 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/16/2023 12:48:12 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PVPB542-040040"
+  DTS:CreatorName="MTR\mcdy01"
+  DTS:DTSID="{4C80C478-1932-4E7F-A04A-22F592792112}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="3084"
+  DTS:ObjectName="ConnecteurIspIntegre"
+  DTS:PackageType="5"
+  DTS:VersionBuild="100"
+  DTS:VersionGUID="{6556E863-7766-4D44-9536-628694DAC5AB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ConnectBD_SQL]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{BA82CDBB-FD87-4248-9FDB-A09C2E3FD249}"
+      DTS:ObjectName="ConnectBD_SQL">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=W367I002RPT1\W367I002RPT1B01;Initial Catalog=SDDMU01;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C930B4D8-AC07-4323-8DE3-927B83A84834}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="bdName">
+      <DTS:VariableValue
+        DTS:DataType="8">SDDMU01</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BB3989B0-ACC0-4065-AFFF-EADE27583C17}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ConnectStringAccess">
+      <DTS:VariableValue
+        DTS:DataType="8">provider = Microsoft.ACE.OLEDB.16.0; Data Source = \\Mtr.intra\367$\Partage\Applications\ApplicatifInterne\Environnement\Acceptation\InfosGestion\9000_GestTechnologieInfo\ConnecteurISP\DataBase\ConnecteurBD_ISP_SSIS.accdb;Persist Security Info=False</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{545C8EB7-B663-4AAF-88AD-A45942B0A8E4}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="EnvoyePar">
+      <DTS:VariableValue
+        DTS:DataType="8">centre.de.pilotage@rbq.gouv.qc.ca</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8F27FFDD-7489-4FF7-8771-F520B45C9507}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ProfileCourriel">
+      <DTS:VariableValue
+        DTS:DataType="8">CourrielSQL</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8F27761C-0496-43BD-988E-10A7A0ABF077}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="ServerName">
+      <DTS:VariableValue
+        DTS:DataType="8">W367I002RPT1\W367I002RPT1B01</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2782656B-5F42-4CC0-90F5-C73A353BC504}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="SmtpServer">
+      <DTS:VariableValue
+        DTS:DataType="8">entree34.moe.qc</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{92792892-34C5-485F-B36B-C4B8082E7719}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="URL_SharePoint">
+      <DTS:VariableValue
+        DTS:DataType="8">https://espaces-rbq-dev.mtr.intra/sites/collaboration/zone/BEHESP/</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ConnecteurIspIntegre"
+      DTS:CreationName="Microsoft.ScriptTask"
+      DTS:Description="Tâche de script"
+      DTS:DTSID="{57B51037-D177-413C-BA13-E9BCA892E8DA}"
+      DTS:ExecutableType="Microsoft.ScriptTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ConnecteurIspIntegre"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ScriptProject
+          Name="ST_b106497acf0c4279b8034508dc713b01"
+          VSTAMajorVersion="17"
+          VSTAMinorVersion="0"
+          Language="CSharp"
+          ReadWriteVariables="User::bdName,User::ConnectStringAccess,User::EnvoyePar,User::ProfileCourriel,User::ServerName,User::SmtpServer,User::URL_SharePoint">
+          <ProjectItem
+            Name="ST_b106497acf0c4279b8034508dc713b01.csproj"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06752C43-6952-4D74-9F83-68BE32C46CCB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ST_b106497acf0c4279b8034508dc713b01</RootNamespace>
+    <AssemblyName>ST_b106497acf0c4279b8034508dc713b01</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.ManagedDTS, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ScriptMain.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
+        <Host Name="ScriptTask" />
+        <ProjectClient>
+          <HostIdentifier>SSIS_ST170</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.resx"
+            Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b106497acf0c4279b8034508dc713b01.Properties.Settings.get_Default():ST_b106497acf0c4279b8034508dc713b01.Properties.Sett" +
+    "ings")]
+
+namespace ST_b106497acf0c4279b8034508dc713b01.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="ScriptMain.cs"
+            Encoding="UTF8"><![CDATA[  #region Help:  Introduction to the script task
+/* The Script Task allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services control flow. 
+ * 
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script task. */
+#endregion
+
+
+#region Namespaces
+using System;
+using System.IO;
+using System.Data;
+using System.Data.Odbc;
+using System.Data.OleDb;
+using System.Linq;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using Microsoft.SqlServer.Dts.Runtime;
+using Microsoft.SharePoint.Client;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Security;
+using System.Net.Mail;
+using System.Net;
+#endregion
+
+namespace ST_b106497acf0c4279b8034508dc713b01
+{
+    /// <summary>
+    /// ScriptMain is the entry point class of the script.  Do not change the name, attributes,
+    /// or parent of this class.
+    /// </summary>
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+    public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+    {
+        #region Help:  Using Integration Services variables and parameters in a script
+        /* To use a variable in this script, first ensure that the variable has been added to 
+         * either the list contained in the ReadOnlyVariables property or the list contained in 
+         * the ReadWriteVariables property of this script task, according to whether or not your
+         * code needs to write to the variable.  To add the variable, save this script, close this instance of
+         * Visual Studio, and update the ReadOnlyVariables and 
+         * ReadWriteVariables properties in the Script Transformation Editor window.
+         * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+         * 
+         * Example of reading from a variable:
+         *  DateTime startTime = (DateTime) Dts.Variables["System::StartTime"].Value;
+         * 
+         * Example of writing to a variable:
+         *  Dts.Variables["User::myStringVariable"].Value = "new value";
+         * 
+         * Example of reading from a package parameter:
+         *  int batchId = (int) Dts.Variables["$Package::batchId"].Value;
+         *  
+         * Example of reading from a project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].Value;
+         * 
+         * Example of reading from a sensitive project parameter:
+         *  int batchId = (int) Dts.Variables["$Project::batchId"].GetSensitiveValue();
+         * */
+
+        #endregion
+
+        #region Help:  Firing Integration Services events from a script
+        /* This script task can fire events for logging purposes.
+         * 
+         * Example of firing an error event:
+         *  Dts.Events.FireError(18, "Process Values", "Bad value", "", 0);
+         * 
+         * Example of firing an information event:
+         *  Dts.Events.FireInformation(3, "Process Values", "Processing has started", "", 0, ref fireAgain)
+         * 
+         * Example of firing a warning event:
+         *  Dts.Events.FireWarning(14, "Process Values", "No values received for input", "", 0);
+         * */
+        #endregion
+
+        #region Help:  Using Integration Services connection managers in a script
+        /* Some types of connection managers can be used in this script task.  See the topic 
+         * "Working with Connection Managers Programatically" for details.
+         * 
+         * Example of using an ADO.Net connection manager:
+         *  object rawConnection = Dts.Connections["Sales DB"].AcquireConnection(Dts.Transaction);
+         *  SqlConnection myADONETConnection = (SqlConnection)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Sales DB"].ReleaseConnection(rawConnection);
+         *
+         * Example of using a File connection manager
+         *  object rawConnection = Dts.Connections["Prices.zip"].AcquireConnection(Dts.Transaction);
+         *  string filePath = (string)rawConnection;
+         *  //Use the connection in some code here, then release the connection
+         *  Dts.Connections["Prices.zip"].ReleaseConnection(rawConnection);
+         * */
+        #endregion
+
+
+        /// <summary>
+        /// This method is called when this script task executes in the control flow.
+        /// Before returning from this method, set the value of Dts.TaskResult to indicate success or failure.
+        /// To open Help, press F1.
+        /// </summary>
+        /// 
+
+        public const string tblChargementFichiersExternes = "SELECT * FROM ChargementFichiersExternes where NomDestination = 'Liste des demandes de Rendez-vous'";
+        public const string tblDossierArchive = "SELECT * FROM DossierArchive";
+        public const string tblCorrespondance = "SELECT * FROM Correspondance order by OrdreUtilisation";
+
+        public const string delLogChargement = "DELETE [SDDMU01].[dbo].[Log_Chargement_Connecteur] where Application = 'ConnecteurISP'";
+        public const string delLogJobChargement = "DELETE [SDDMU01].[dbo].[Log_Job_Connecteur] where Application = 'ConnecteurISP'";
+
+        public string oRepertoireChargement;
+        public string oAdresseFichierNonConforme;
+        public string oRepertoireArchive;
+        public string oRepertoireNonConforme;
+
+
+        public string newLine = Environment.NewLine;
+        public string oUserCode = "auto01";
+        public string userlogin = Environment.UserName.ToString();
+        public string UserName = "Tâche Automatisée";
+        public string SchemasUser;
+        public string oStartJob = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+        public bool firstRow = true;
+        public bool blErreurExecution = false;
+        public bool blValeurGroupementIsNUll = false;
+        public DateTime dtDateDebut = DateTime.Now;
+        public string siteUrl;
+
+        public List<string> Collection;
+
+        public class MesCorrespondances
+        {
+            private List<String> NomColonneExcel;
+            private List<String> NomColonneSharePoint;
+            private List<int> OrdreUtilisation;
+            private List<string> Groupement;
+            private List<int> OrdreGroupement;
+            private List<string> Formatage;
+            private List<string> Type;
+            private List<bool> IndicateurException;
+            private List<bool> Traite;
+            private List<string> Masque;
+            public List<String> strNomColonneExcel { get { return NomColonneExcel; } set { NomColonneExcel = value; } }
+            public List<String> strNomColonneSharePoint { get { return NomColonneSharePoint; } set { NomColonneSharePoint = value; } }
+            public List<int> intOrdreUtilisation { get { return OrdreUtilisation; } set { OrdreUtilisation = value; } }
+            public List<String> strGroupement { get { return Groupement; } set { Groupement = value; } }
+            public List<int> intOrdreGroupement { get { return OrdreGroupement; } set { OrdreGroupement = value; } }
+            public List<String> strFormatage { get { return Formatage; } set { Formatage = value; } }
+            public List<String> strType { get { return Type; } set { Type = value; } }
+            public List<bool> boolIndicateurException { get { return IndicateurException; } set { IndicateurException = value; } }
+            public List<bool> boolTraite { get { return Traite; } set { Traite = value; } }
+            public List<string> strMasque { get { return Masque; } set { Masque = value; } }
+        }
+
+        public class excelColumnsInfo
+        {
+            private List<String> NomColonneExcel;
+            private List<String> NomColonneSharePoint;
+            private List<String> NomColonneNameExcel;
+            private List<String> Groupement;
+            private List<string> Formatage;
+            private List<int> OrdreGroupement;
+            private List<string> Valeur;
+            private List<string> Type;
+            private List<bool> IndicateurException;
+            private List<bool> Traite;
+            private List<string> Masque;
+            public List<String> strNomColonneExcel { get { return NomColonneExcel; } set { NomColonneExcel = value; } }
+            public List<String> strNomColonneSharePoint { get { return NomColonneSharePoint; } set { NomColonneSharePoint = value; } }
+            public List<String> strNomColonneNameExcel { get { return NomColonneNameExcel; } set { NomColonneNameExcel = value; } }
+            public List<String> strGroupement { get { return Groupement; } set { Groupement = value; } }
+            public List<String> strFormatage { get { return Formatage; } set { Formatage = value; } }
+            public List<int> intOrdreGroupement { get { return OrdreGroupement; } set { OrdreGroupement = value; } }
+            public List<string> strValeur { get { return Valeur; } set { Valeur = value; } }
+            public List<string> strType { get { return Type; } set { Type = value; } }
+            public List<bool> boolIndicateurException { get { return IndicateurException; } set { IndicateurException = value; } }
+            public List<bool> boolTraite { get { return Traite; } set { Traite = value; } }
+            public List<string> strMasque { get { return Masque; } set { Masque = value; } }
+        }
+
+        MesCorrespondances checkMesCorrespondances = new MesCorrespondances()
+        {
+            strNomColonneExcel = new List<string>(),
+            strNomColonneSharePoint = new List<string>(),
+            intOrdreUtilisation = new List<int>(),
+            strGroupement = new List<String>(),
+            intOrdreGroupement = new List<int>(),
+            strFormatage = new List<String>(),
+            strType = new List<String>(),
+            boolIndicateurException = new List<bool>(),
+            boolTraite = new List<bool>(),
+            strMasque = new List<String>()
+        };
+
+        excelColumnsInfo checkExcelColumnInfo = new excelColumnsInfo()
+        {
+            strNomColonneExcel = new List<string>(),
+            strNomColonneSharePoint = new List<string>(),
+            strNomColonneNameExcel = new List<string>(),
+            strGroupement = new List<string>(),
+            strFormatage = new List<String>(),
+            intOrdreGroupement = new List<int>(),
+            strValeur = new List<string>(),
+            strType = new List<string>(),
+            boolIndicateurException = new List<bool>(),
+            boolTraite = new List<bool>(),
+            strMasque = new List<String>()
+        };
+
+        public void Main()
+        {
+            // TODO: Add your code here
+            TraiteConnecteur();
+            Dts.TaskResult = (int)ScriptResults.Success;
+
+        }
+
+        public void TraiteConnecteur()
+        {
+            SchemasUser = "[MTR\\" + userlogin.ToString() + "].";
+
+            String date = DateTime.Now.ToString("yyyy-MM-dd hh:mm:ss");
+            String EnvoyePar = Dts.Variables["User::EnvoyePar"].Value.ToString();
+            string ServerNameSql = @Dts.Variables["User::ServerName"].Value.ToString();
+            string ConnectStringAccess = @Dts.Variables["User::ConnectStringAccess"].Value.ToString();
+
+            SqlConnection mySQLConnection = Dts.Connections["ConnectBD_SQL"].AcquireConnection(Dts.Transaction) as SqlConnection;
+            OleDbConnection connectionAccess = new OleDbConnection(ConnectStringAccess);
+
+            siteUrl = @Dts.Variables["User::URL_SharePoint"].Value.ToString();
+
+
+            // Connecter à la BD   
+            try
+            {
+                InsertTableLogChargement("ConnecteurISP", "connectionAccess.Open()");
+                connectionAccess.Open();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+                blErreurExecution = true;
+                InsertTableLogJobConnecteur("connectionAccess.Open()", ex.Message.ToString());
+            }
+
+            if (blErreurExecution != true)
+            {
+                // delete l'historique du dernier log de chargement
+                // DeleteTableLogChargement();
+                // DeleteTableLogJobChargement();
+
+                InsertTableLogChargement("ConnecteurISP", "Début du traitement");
+
+                // load la table ChargementFichiersExternes et DossierArchive
+                LoadChargementFichiersExternes();
+                LoadDossierArchive();
+
+                // Lire le répertoire 
+                DirectoryInfo d = new DirectoryInfo(@oRepertoireChargement);
+                try
+                {
+
+                    FileInfo[] Files = d.GetFiles("*.xlsx");
+
+                    foreach (FileInfo file in Files)
+                    {
+                        blErreurExecution = false;
+                        dtDateDebut = DateTime.Now;
+                        try
+                        {
+                            ReadDataExcel(@oRepertoireChargement + file.Name);
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                            blErreurExecution = true;
+                            InsertTableLogJobConnecteur("ReadDataExcel()", ex.Message.ToString());
+                        }
+
+                        if (blErreurExecution)
+                        {
+                            DeplacerFichier(@oRepertoireChargement + file.Name, oRepertoireNonConforme + file.Name);
+                            InsertTableLogChargement("ConnecteurISP", "Erreur fichier :: " + file.Name.ToString());
+                            InsertTableLogJobISP(file.Name.ToString(), "Insuccès");
+                            blErreurExecution = true;
+                        }
+                        else
+                        {
+                            DeplacerFichier(@oRepertoireChargement + file.Name, @oRepertoireArchive + file.Name);
+                            InsertTableLogChargement("ConnecteurISP", "Fin du traitement fichier :: " + file.Name.ToString());
+                            InsertTableLogJobISP(file.Name.ToString(), "Succès");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("TraiteConnecteur()", ex.Message.ToString());
+                }
+            }
+
+            if (blErreurExecution)
+            {
+                Email_Send("Erreur système", oRepertoireNonConforme, oAdresseFichierNonConforme);
+                blErreurExecution = true;
+            }
+            connectionAccess.Close();
+
+            ///////////////////////////////////////////////////////////////
+            //Dts.TaskResult = (int)ScriptResults.Success;
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Lire le fichier Excel
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void ReadDataExcel(string strNomFichierExcel)
+            {
+                string sSheetName = null;
+                string sConnection = null;
+                int position = 0;
+
+                DataTable dtTablesList = default(DataTable);
+                OleDbCommand oleExcelCommand = default(OleDbCommand);
+                OleDbDataReader oleExcelReader = default(OleDbDataReader);
+                OleDbConnection oleExcelConnection = default(OleDbConnection);
+
+                sConnection = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + strNomFichierExcel + "; Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\"";
+                //sConnection = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=" + strNomFichierExcel + "; Extended Properties=\"Excel 12.0;HDR=No;IMEX=1\"";
+
+                oleExcelConnection = new OleDbConnection(sConnection);
+
+                try
+                {
+                    oleExcelConnection.Open();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("oleExcelConnection.Open()", ex.Message.ToString());
+                }
+
+                if (blErreurExecution != true)
+                {
+                    dtTablesList = oleExcelConnection.GetSchema("Tables");
+
+                    if (dtTablesList.Rows.Count > 0)
+                    {
+                        sSheetName = dtTablesList.Rows[0]["TABLE_NAME"].ToString();
+                    }
+
+                    dtTablesList.Clear();
+                    dtTablesList.Dispose();
+
+                    if (!string.IsNullOrEmpty(sSheetName))
+                    {
+                        oleExcelCommand = oleExcelConnection.CreateCommand();
+                        oleExcelCommand.CommandText = "Select * From [" + sSheetName + "]";
+                        oleExcelCommand.CommandType = CommandType.Text;
+                        InitTraiteeCorrespondance();
+                        LoadCorrespondance();
+                        firstRow = true;
+
+                        using (oleExcelReader = oleExcelCommand.ExecuteReader())
+                        {
+                            while (oleExcelReader.Read())
+                            {
+                                if (firstRow)
+                                {
+                                    for (int columnNum = 0; columnNum <= oleExcelReader.FieldCount - 1; columnNum++)
+                                    {
+                                        if (checkMesCorrespondances.strNomColonneExcel.Contains(oleExcelReader[columnNum].ToString()))
+                                        {
+                                            position = checkMesCorrespondances.strNomColonneExcel.FindIndex(x => x.ToString() == oleExcelReader[columnNum].ToString());
+
+                                            checkExcelColumnInfo.strNomColonneNameExcel.Add(oleExcelReader.GetName(columnNum).ToString());
+
+                                            checkExcelColumnInfo.strNomColonneExcel.Add(checkMesCorrespondances.strNomColonneExcel[position].ToString());
+                                            checkExcelColumnInfo.strNomColonneSharePoint.Add(checkMesCorrespondances.strNomColonneSharePoint[position].ToString());
+                                            checkExcelColumnInfo.strGroupement.Add(checkMesCorrespondances.strGroupement[position].ToString());
+                                            checkExcelColumnInfo.intOrdreGroupement.Add((int)checkMesCorrespondances.intOrdreGroupement[position]);
+                                            checkExcelColumnInfo.strFormatage.Add(checkMesCorrespondances.strFormatage[position].ToString());
+                                            checkExcelColumnInfo.strType.Add(checkMesCorrespondances.strType[position].ToString());
+                                            checkExcelColumnInfo.boolIndicateurException.Add(checkMesCorrespondances.boolIndicateurException[position]);
+                                            checkExcelColumnInfo.strValeur.Add("");
+                                            checkExcelColumnInfo.boolTraite.Add(false);
+                                            checkExcelColumnInfo.strMasque.Add(checkMesCorrespondances.strMasque[position].ToString());
+
+                                            if (((checkMesCorrespondances.strGroupement[position].ToString() != "") && (checkMesCorrespondances.boolTraite[position] != true) && (checkMesCorrespondances.boolIndicateurException[position] != true))
+                                                || (checkMesCorrespondances.strGroupement[position].ToString() == "") && (checkMesCorrespondances.boolIndicateurException[position] != true))
+                                            {
+                                                InitColonneTraitee(checkMesCorrespondances.strGroupement[position].ToString(), columnNum);
+                                            }
+                                        }
+                                    }
+                                    firstRow = false;
+                                }
+                                else
+                                {
+                                    InitTraiteeFalse();
+                                    for (int columnNum = 0; columnNum <= oleExcelReader.FieldCount - 1; columnNum++)
+                                    {
+                                        if ((checkExcelColumnInfo.strNomColonneNameExcel.Contains(oleExcelReader.GetName(columnNum).ToString())))
+                                        {
+                                            position = checkExcelColumnInfo.strNomColonneNameExcel.FindIndex(x => x.ToString() == oleExcelReader.GetName(columnNum).ToString());
+                                            checkExcelColumnInfo.strValeur[position] = oleExcelReader[columnNum].ToString();
+                                        }
+                                    }
+
+                                    // Traite les exceptions champs calculés, les conditions, autres et les dates récurentes et insert dans SharePoint  la demande de rendez-vous
+                                    TraiteException();
+                                }
+                            }
+                        }
+
+                        oleExcelReader.Close();
+                    }
+                    oleExcelConnection.Close();
+                }
+                else
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("Traite Erreur Excel", strNomFichierExcel.ToString());
+                }
+
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Initialise les valeurs des structures de correspondances
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void InitTraiteeCorrespondance()
+            {
+                checkMesCorrespondances = new MesCorrespondances()
+                {
+                    strNomColonneExcel = new List<string>(),
+                    strNomColonneSharePoint = new List<string>(),
+                    intOrdreUtilisation = new List<int>(),
+                    strGroupement = new List<String>(),
+                    intOrdreGroupement = new List<int>(),
+                    strFormatage = new List<String>(),
+                    strType = new List<String>(),
+                    boolIndicateurException = new List<bool>(),
+                    boolTraite = new List<bool>(),
+                    strMasque = new List<String>()
+                };
+
+                checkExcelColumnInfo = new excelColumnsInfo()
+                {
+                    strNomColonneExcel = new List<string>(),
+                    strNomColonneSharePoint = new List<string>(),
+                    strNomColonneNameExcel = new List<string>(),
+                    strGroupement = new List<string>(),
+                    strFormatage = new List<String>(),
+                    intOrdreGroupement = new List<int>(),
+                    strValeur = new List<string>(),
+                    strType = new List<String>(),
+                    boolIndicateurException = new List<bool>(),
+                    boolTraite = new List<bool>(),
+                    strMasque = new List<String>()
+                };
+
+                Collection = new List<string>();
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Initialise les colonnes groupées et à traiter
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void InitColonneTraitee(string strGroupeName, int pcolumnNum)
+            {
+                for (int columnNum = pcolumnNum; columnNum <= checkMesCorrespondances.strNomColonneExcel.Count - 1; columnNum++)
+                {
+                    if (checkMesCorrespondances.strGroupement[columnNum].ToString() == strGroupeName.ToString())
+                    {
+                        checkMesCorrespondances.boolTraite[columnNum] = true;
+                    }
+
+                }
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Initialise les valeurs des colonnes groupées et à traiter
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            string InitColonneValeursTraitees(string strGroupeName, string pstrFormatage, int pcolumnNum)
+            {
+                string strMessage = "";
+                string strValeur = "";
+
+
+                for (int columnNum = pcolumnNum; columnNum <= checkExcelColumnInfo.strNomColonneNameExcel.Count - 1; columnNum++)
+                {
+                    if (checkExcelColumnInfo.strGroupement[columnNum].ToString() == strGroupeName.ToString())
+                    {
+                        strValeur = InitMasque(checkExcelColumnInfo.strValeur[columnNum].ToString(), checkExcelColumnInfo.strMasque[columnNum].ToString());
+                        if (string.IsNullOrEmpty(strValeur) == true)
+                        {
+                            blValeurGroupementIsNUll = true;
+                        }
+                        else
+                        {
+                            blValeurGroupementIsNUll = false;
+                        }
+                        strValeur = strValeur.Replace("'", "''").ToString();
+                        pstrFormatage = pstrFormatage.Replace("%" + checkExcelColumnInfo.intOrdreGroupement[columnNum].ToString(), strValeur.ToString());
+                        strMessage = pstrFormatage.ToString();
+                        checkExcelColumnInfo.boolTraite[columnNum] = true;
+                    }
+                }
+                return GetText(pstrFormatage.ToString(), "C");
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Initialise les valeurs selon le masque d'affichage à traiter
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            string InitMasque(string pstrValeur, string pstrMasque)
+            {
+                string strValeur = "";
+
+                if (string.IsNullOrEmpty(pstrMasque) != true)
+                {
+                    strValeur = int.Parse(pstrValeur).ToString(pstrMasque.ToString());
+                }
+                else
+                {
+                    strValeur = pstrValeur;
+                }
+
+                return GetText(strValeur.ToString(), "C");
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Initialise les valeurs de la colonne groupée à traiter
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void InitTraiteeFalse()
+            {
+
+                for (int columnNum = 0; columnNum <= checkExcelColumnInfo.strNomColonneNameExcel.Count - 1; columnNum++)
+                {
+                    checkExcelColumnInfo.boolTraite[columnNum] = false;
+                }
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Load correspondance
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void LoadCorrespondance()
+            {
+                string sqlCorrCmd = tblCorrespondance.ToString();
+                OleDbCommand commandDataReader = new OleDbCommand(sqlCorrCmd, connectionAccess);
+                string varOrderUtilisation;
+
+                try
+                {
+                    using (OleDbDataReader readerCorr = commandDataReader.ExecuteReader())
+                    {
+                        // Lire les occurrences de la table LoadTable
+                        while (readerCorr.Read())
+                        {
+                            varOrderUtilisation = readerCorr["OrdreUtilisation"].ToString();
+                            checkMesCorrespondances.strNomColonneExcel.Add(readerCorr["NomColonneExcel"].ToString());
+                            checkMesCorrespondances.strNomColonneSharePoint.Add(readerCorr["NomColonneSharePoint"].ToString());
+                            checkMesCorrespondances.intOrdreUtilisation.Add((int)readerCorr["OrdreUtilisation"]);
+                            checkMesCorrespondances.strFormatage.Add(readerCorr["Formatage"].ToString());
+                            checkMesCorrespondances.strGroupement.Add(readerCorr["Groupement"].ToString());
+                            checkMesCorrespondances.intOrdreGroupement.Add((int)readerCorr["OrdreGroupement"]);
+                            checkMesCorrespondances.strType.Add(readerCorr["TypeChamp"].ToString());
+                            checkMesCorrespondances.boolIndicateurException.Add((bool)readerCorr["IndicateurException"]);
+                            checkMesCorrespondances.boolTraite.Add(false);
+                            checkMesCorrespondances.strMasque.Add(readerCorr["Masque"].ToString());
+                        }
+                        readerCorr.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("LoadCorrespondance()", ex.Message.ToString());
+                }
+
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Retourne la valeur formatée selon le type
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            string GetText(string strValeur, string strType)
+            {
+                string text;
+                switch (strType)
+                {
+                    case "C":
+                        text = strValeur.ToString();
+                        break;
+                    case "D":
+                        text = strValeur.ToString().Replace("00:00:00", "13:00:00");
+                        break;
+                    case "N":
+                        text = strValeur.ToString();
+                        break;
+                    default:
+                        text = strValeur.ToString();
+                        break;
+                }
+
+                if (text == "''") { text = "NULL"; }
+                return text;
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     détruit les informations dant la table Log_Chargement_Connecteur
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void DeleteTableLogChargement()
+            {
+                string sqlDelCmd = delLogChargement.ToString();
+
+                try
+                {
+                    SqlCommand SQLCommandDel = new SqlCommand(sqlDelCmd.ToString(), mySQLConnection);
+                    SQLCommandDel.CommandType = CommandType.Text;
+                    SqlDataReader readerDel = SQLCommandDel.ExecuteReader();
+                    readerDel.Read();
+                    readerDel.Close();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogChargement("ERR", "DeleteTableLogChargement()");
+                }
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     détruit les informations dant la table Log_Job_Connecteur
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void DeleteTableLogJobChargement()
+            {
+                string sqlDelCmdCharg = delLogJobChargement.ToString();
+
+                try
+                {
+                    SqlCommand DelCmdCharg = new SqlCommand(sqlDelCmdCharg.ToString(), mySQLConnection);
+                    DelCmdCharg.CommandType = CommandType.Text;
+                    SqlDataReader readerCharg = DelCmdCharg.ExecuteReader();
+                    readerCharg.Read();
+                    readerCharg.Close();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogChargement("ERR", "DeleteTableLogJobChargement()");
+                }
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Load table ChargementFichiersExternes
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void LoadChargementFichiersExternes()
+            {
+                InsertTableLogChargement("ConnecteurISP", "LoadChargementFichiersExternes");
+                string sqlCmd = tblChargementFichiersExternes.ToString();
+
+                try
+                {
+                    OleDbCommand command = new OleDbCommand(sqlCmd.ToString(), connectionAccess);
+                    OleDbDataReader readerExt = command.ExecuteReader();
+                    readerExt.Read();
+                    oRepertoireChargement = readerExt["CheminFichierChargement"].ToString();
+                    siteUrl = readerExt["CheminFichierLiés"].ToString();
+                    oAdresseFichierNonConforme = readerExt["CourrielFichierNonConforme"].ToString();
+                    readerExt.Close();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("LoadChargementFichiersExternes()", ex.Message.ToString());
+                }
+            }
+
+            ////////////////////////////////////////////////////////////////////////
+            ///
+            //     Load table ChargementFichiersExternes
+            ///
+            ///////////////////////////////////////////////////////////////////////
+            void LoadDossierArchive()
+            {
+                InsertTableLogChargement("ConnecteurISP", "LoadDossierArchive");
+                string sqlCmd = tblDossierArchive.ToString();
+
+                try
+                {
+                    OleDbCommand command = new OleDbCommand(sqlCmd.ToString(), connectionAccess);
+                    OleDbDataReader readerArch = command.ExecuteReader();
+                    readerArch.Read();
+                    oRepertoireArchive = readerArch["CheminArchive"].ToString();
+                    oRepertoireNonConforme = readerArch["CheminNonConforme"].ToString();
+                    readerArch.Close();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("LoadDossierArchive()", ex.Message.ToString());
+                }
+            }
+
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     insert les informations dant la table Log_Chargement_Connecteur
+            ///
+            /////////////////////////////////////////////////////////////////////
+            void InsertTableLogChargement(string strIndSystem, string strSqlTable)
+            {
+                string sqlInsCmd = "insert into[SDDMU01].[dbo].[Log_Chargement_Connecteur] values('ConnecteurISP', '" + strIndSystem + "', '" + strSqlTable + "', GETDATE(), 'Auto01', 'Tâche Automatisée')";
+
+                try
+                {
+                    SqlCommand SQLCommandLog = new SqlCommand(sqlInsCmd.ToString(), mySQLConnection);
+                    SQLCommandLog.CommandType = CommandType.Text;
+                    SqlDataReader readerLog = SQLCommandLog.ExecuteReader();
+                    readerLog.Read();
+                    readerLog.Close();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("InsertTableLogChargement()", ex.Message.ToString());
+                }
+            }
+
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     détermine le rang dans la semaine d'un nom de jour en texte
+            //     (inverse de fonction WeekdayName)
+            ///
+            /////////////////////////////////////////////////////////////////////
+            int NoJourSem(string pstrTxt)
+            {
+                int ReturnNoJourSem = 0;
+                switch (pstrTxt)
+                {
+                    case "dimanche":
+                        ReturnNoJourSem = 1;
+                        break;
+                    case "lundi":
+                        ReturnNoJourSem = 2;
+                        break;
+                    case "mardi":
+                        ReturnNoJourSem = 3;
+                        break;
+                    case "mercredi":
+                        ReturnNoJourSem = 4;
+                        break;
+                    case "jeudi":
+                        ReturnNoJourSem = 5;
+                        break;
+                    case "vendredi":
+                        ReturnNoJourSem = 6;
+                        break;
+                    case "samedi":
+                        ReturnNoJourSem = 7;
+                        break;
+                }
+                return ReturnNoJourSem;
+            }
+
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     indique si on doit faire le traitement chaque semaine,
+            //     au 2, 3 ou 4 semaines
+            ///
+            /////////////////////////////////////////////////////////////////////
+            int CalculerFacteurFrequence(string pstrFreq)
+            {
+                int Freq;
+                switch (pstrFreq)
+                {
+
+                    case "Chaque semaine":
+                        Freq = 1;
+                        break;
+                    case "Toutes les deux semaines":
+                        Freq = 2;
+                        break;
+                    case "Toutes les trois semaines":
+                        Freq = 3;
+                        break;
+                    case "Toutes les quatre semaines":
+                        Freq = 4;
+                        break;
+                    default:
+                        Freq = 1;
+                        break;
+                }
+                return Freq;
+            }
+
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     insert les informations dant la table Log_Job_Connecteur
+            ///
+            /////////////////////////////////////////////////////////////////////
+            void InsertTableLogJobConnecteur(string pFonction, string pErreurMessage)
+            {
+                int lParametreErreurMessage;
+                pErreurMessage = pErreurMessage.Replace("'", "''");
+                lParametreErreurMessage = pErreurMessage.Length;
+
+                if (pErreurMessage.Length > 250)
+                {
+                    pErreurMessage = pErreurMessage.Substring(0, 245);
+                    pErreurMessage = pErreurMessage + "...";
+                }
+
+                string sqlInsCmd = "insert into[SDDMU01].[dbo].[Log_Job_Connecteur] values('ConnecteurISP', '" + "ISP" + "', '" + "Excel vers SharePoint" + "', '" + pFonction + "', 'Erreur', '" + pErreurMessage + "', 'Auto01', GETDATE())";
+
+                try
+                {
+                    SqlCommand SQLCommandJob = new SqlCommand(sqlInsCmd.ToString(), mySQLConnection);
+                    SQLCommandJob.CommandType = CommandType.Text;
+                    SqlDataReader readerErreur = SQLCommandJob.ExecuteReader();
+                    readerErreur.Read();
+                    readerErreur.Close();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogChargement("ERR", "Impossible d'insérer dans Log_Job_Connecteur");
+                }
+            }
+
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     insert les informations dant la table Log_Jobs
+            ///
+            /////////////////////////////////////////////////////////////////////
+            void InsertTableLogJobISP(string pNomFichierCharger, string pAction)
+            {
+
+                string sqlInsCmd = "insert into Log_Jobs values('Auto01', 'ConnecteurISP', '" + dtDateDebut + "', '" + DateTime.Now + "', '" + pAction.ToString() + "', '" + pNomFichierCharger.ToString() + "', null, null)";
+
+                try
+                {
+                    OleDbCommand command = new OleDbCommand(sqlInsCmd.ToString(), connectionAccess);
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogChargement("ERR", "Impossible d'insérer dans Log_Jobs (Access)");
+                }
+            }
+
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     déplace le fichier
+            ///
+            /////////////////////////////////////////////////////////////////////
+            void DeplacerFichier(string de, string a)
+            {
+                try
+                {
+                    if (System.IO.File.Exists(a))
+                    {
+                        System.IO.File.Delete(a);
+                    }
+                    System.IO.File.Move(de, a);
+                }
+                catch (IOException ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("DeplacerFichier()", ex.Message.ToString());
+                }
+            }
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     envois courriel
+            ///
+            /////////////////////////////////////////////////////////////////////
+            void Email_Send(string pnomFichier, string pnomRepertoire, string pAdresseNonConforme)
+            {
+                String strAfficheErreur = "";
+                String EnvoisCourrielPar = Dts.Variables["User::EnvoyePar"].Value.ToString();
+                String EnvoisCourrielA = pAdresseNonConforme.ToString();
+                String EnvoisCourrielSuject = "L'application (Connecteur ISP) a un Fichier non conforme - Rendez-vous SharePoint ";
+                String EnvoisCourrielCorps = "Bonjour," + newLine + newLine +
+                                             EnvoisCourrielSuject + newLine + newLine +
+                                             "Merci d'appliquer les correctifs si c'est le cas." + newLine + newLine;
+                String EnvoisCourrielPiedCorps = "..." + newLine +
+                                                 "Pour toutes questions, veuillez communiquer avec la _Boîte Centre de pilotage RBQ centre.de.pilotage@rbq.gouv.qc.ca." + newLine + newLine +
+                                                 "Direction des technologies de l'information" + newLine +
+                                                 "Régie du bâtiment du Québec";
+                // Lire les règles d'affaire
+                strAfficheErreur = strAfficheErreur.ToString() + "Ce fichier de rendez-vous est non conforme : " + pnomFichier + "." + newLine +
+                                                 "Ce rendez-vous n'a pas été importé dans l'outil Sharepoint." + newLine +
+                                                 "Il a été déposé dans le répertoire suivant : " + pnomRepertoire + newLine;
+
+                EnvoisCourrielCorps = EnvoisCourrielCorps.ToString() + strAfficheErreur.ToString() + newLine + EnvoisCourrielPiedCorps.ToString();
+
+                String SmtpServer = Dts.Variables["User::SmtpServer"].Value.ToString();
+
+                try
+                {
+                    // Création du courriel et changement du format en HTML
+                    MailMessage FormatCourrielHtml = new MailMessage(EnvoisCourrielPar, EnvoisCourrielA, EnvoisCourrielSuject, EnvoisCourrielCorps);
+
+                    // Créer le SMTP client et envois le courriel
+                    SmtpClient monSmtpClient = new SmtpClient(SmtpServer);
+                    monSmtpClient.Credentials = System.Net.CredentialCache.DefaultNetworkCredentials;
+                    monSmtpClient.Send(FormatCourrielHtml);
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show(ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("SendMail()", ex.Message.ToString());
+                }
+            }
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     calcul la date du rendez-vous
+            ///
+            /////////////////////////////////////////////////////////////////////
+            List<DateTime> CalculerDatesRDV(int pintNbOcc, DateTime pdtDateDeb, DateTime pdtDateFin, string pstrJours, string pstrFreq)
+            {
+                List<DateTime> olCol = new List<DateTime>();
+
+                //tableaux
+                string[] arrAllJour = new string[0];
+
+                //caractères, numériques et booléens
+                DateTime dtDimSemCour;
+                DateTime pdtDateTraitePreced;
+                int intJourSem;
+
+
+                //déterminer les jours ou appliquer la récurrence
+                arrAllJour = pstrJours.Split(';');
+                int[] arrAllJourRang = new int[arrAllJour.Count()];
+
+                //calculer le rang dans la semaine ou se trouvent ces jours si nécessaire
+                if (arrAllJour.Count() > 0)
+                {
+                    for (int columnNum = 0; columnNum <= arrAllJour.Count() - 1; columnNum++)
+                    {
+                        arrAllJourRang[columnNum] = NoJourSem(arrAllJour[columnNum].ToLower());
+                    }
+                }
+
+                //----------------
+                // CALCUL
+                //----------------
+                //première date est spécifiée
+                olCol.Add(pdtDateDeb);
+                pdtDateTraitePreced = pdtDateDeb;
+
+
+                //retrouver le dimanche de la semaine de début
+                intJourSem = (int)pdtDateDeb.DayOfWeek;
+
+                dtDimSemCour = pdtDateDeb.AddDays(-intJourSem);
+                // trace de debug Yves InsertTableLogChargement("ConnecteurISP", "La première journée de la semaine est :: " + dtDimSemCour.ToString());
+
+                //ajouter une journée au jour de la semaine pour ne pas traiter la date de début
+                intJourSem = intJourSem + 1;
+
+                //boucler tant qu'on n'a pas dépassé le nb d'occurence ou date de fin
+                while ((olCol.Count < pintNbOcc) || (dtDimSemCour <= pdtDateFin))
+                {
+                    // boucler sur les jours de la semaine souhaités
+                    for (int columnNum = 0; columnNum <= arrAllJourRang.Count() - 1; columnNum++)
+                    {
+                        if (arrAllJourRang[columnNum] >= intJourSem)
+                        {
+                            //si le jour souhaité est à venir, l'ajouter
+                            if (pdtDateTraitePreced != dtDimSemCour.AddDays(arrAllJourRang[columnNum] - 1))
+                            {
+                                olCol.Add(dtDimSemCour.AddDays(arrAllJourRang[columnNum] - 1));
+                                //initialiser le jour actuel au jour de la semaine souhaité qu'on vient de traiter
+                                pdtDateTraitePreced = dtDimSemCour.AddDays(arrAllJourRang[columnNum] - 1);
+                                intJourSem = arrAllJourRang[columnNum] + 1;
+                            }
+                        }
+                    }
+                    //réinitialiser le jour de la semaine au dimanche pour traiter une prochaine semaine et calculer le dimanche de départ
+                    intJourSem = 1;
+
+                    dtDimSemCour = dtDimSemCour.AddDays(7 * CalculerFacteurFrequence(pstrFreq));
+                }
+
+                //gestion spéciale pour si on fonctionne par date de fin, l'ajouter automatiquement
+                if (pdtDateFin != null && pdtDateFin.Year.ToString() != "2000")
+                {
+                    olCol.Add(pdtDateFin);
+                }
+
+                return olCol;
+            }
+            //////////////////////////////////////////////////////////////////////
+            ///
+            //     Traite les exceptions qui ne sont pas traités pas les
+            //     correspondances (champs calculés, les conditions et autres)
+            ///
+            /////////////////////////////////////////////////////////////////////
+            void TraiteException()
+            {
+                // Variable SharePoint
+                InsertTableLogChargement("ConnecteurISP", "TraiteException");
+
+                ClientContext ctx = new ClientContext(siteUrl);
+                ctx.ExecutingWebRequest += new EventHandler<WebRequestEventArgs>(ctx_MixedAuthRequest);
+                // Initialise l'authentification
+                ctx.AuthenticationMode = ClientAuthenticationMode.Default;
+                ctx.Credentials = System.Net.CredentialCache.DefaultCredentials;
+
+                List DemandeRv = ctx.Web.Lists.GetByTitle("Liste des demandes de Rendez-vous");
+                ListItemCreationInformation itemInfo = new ListItemCreationInformation();
+
+                string strNbOcc = checkExcelColumnInfo.strValeur[checkExcelColumnInfo.strNomColonneExcel.FindIndex(x => x.ToString() == "recurrenceSouhaiteeFinOccurencesNombre")].ToString(); // "U"
+                string strOccSouhaitjour = checkExcelColumnInfo.strValeur[checkExcelColumnInfo.strNomColonneExcel.FindIndex(x => x.ToString() == "recurrenceSouhaiteeJour")].ToString(); // "R"
+                string strOccSouhaitInterval = checkExcelColumnInfo.strValeur[checkExcelColumnInfo.strNomColonneExcel.FindIndex(x => x.ToString() == "recurrenceSouhaitee")].ToString(); // "Q"
+                string strOccSouhaitFinJourDate = checkExcelColumnInfo.strValeur[checkExcelColumnInfo.strNomColonneExcel.FindIndex(x => x.ToString() == "recurrenceSouhaiteeFinJourDate")].ToString(); // "T"
+                string strnoConfirmation = checkExcelColumnInfo.strValeur[checkExcelColumnInfo.strNomColonneExcel.FindIndex(x => x.ToString() == "noConfirmation")].ToString(); // "W"
+
+                // Trouver les jours ou appliquer la récurrence
+                string[] alJours = strOccSouhaitjour.Split(';');
+
+                // Récupèrer la date de début
+                DateTime dlDateDebut = DateTime.ParseExact(checkExcelColumnInfo.strValeur[checkExcelColumnInfo.strNomColonneExcel.FindIndex(x => x.ToString() == "dateSouhaitee")].ToString(), "dd/MM/yyyy", null); // "M"
+                string strdureeSouhaitee = checkExcelColumnInfo.strValeur[checkExcelColumnInfo.strNomColonneExcel.FindIndex(x => x.ToString() == "dureeSouhaitee")].ToString(); // "P"
+
+                DateTime dlDateFinValid;
+                DateTime dlDateFin;
+                DateTime dlOccSouhaitFinJourDate = DateTime.ParseExact("01/01/2000", "dd/MM/yyyy", null);
+                DateTime dlDateCour = DateTime.ParseExact("01/01/2000", "dd/MM/yyyy", null);
+                List<DateTime> olColDateRDV = new List<DateTime>();
+                int intCpt;
+
+                // Si valeur null ou vide inscrire 0
+                if (string.IsNullOrEmpty(strNbOcc))
+                {
+                    strNbOcc = "0";
+                }
+
+                // Récupèrer la date de fin
+                if (string.IsNullOrEmpty(strOccSouhaitFinJourDate) != true)
+                {
+                    dlDateFin = DateTime.ParseExact(strOccSouhaitFinJourDate, "dd/MM/yyyy", null);
+                    dlDateFinValid = DateTime.ParseExact(strOccSouhaitFinJourDate, "dd/MM/yyyy", null);
+                    dlOccSouhaitFinJourDate = DateTime.ParseExact(strOccSouhaitFinJourDate, "dd/MM/yyyy", null);
+                }
+                else
+                {
+                    dlDateFin = DateTime.ParseExact("01/01/2000", "dd/MM/yyyy", null);
+                    dlDateFinValid = DateTime.ParseExact("01/01/2000", "dd/MM/yyyy", null);
+                    dlDateCour = DateTime.ParseExact("01/01/2000", "dd/MM/yyyy", null);
+                }
+
+                ////////////////////////////////////////////
+                ///
+                /// 
+                olColDateRDV = CalculerDatesRDV(int.Parse(strNbOcc), dlDateDebut, dlDateFin, strOccSouhaitjour.ToString(), strOccSouhaitInterval.ToString());
+
+                for (int columnNum = 0; columnNum <= olColDateRDV.Count() - 1; columnNum++)
+                {
+
+                    intCpt = columnNum + 1;
+
+                    if (string.IsNullOrEmpty(strOccSouhaitFinJourDate) && strNbOcc == "0" && string.IsNullOrEmpty(dlDateDebut.ToString()))
+                    {
+                        olColDateRDV.RemoveAt(columnNum);
+                        break;
+                    }
+
+                    if (olColDateRDV[columnNum] > dlDateFinValid && dlDateFinValid.Year.ToString() != "2000")
+                    {
+                        olColDateRDV.RemoveAt(columnNum);
+                        break;
+
+                    }
+
+                    if ((intCpt > int.Parse(strNbOcc) && strNbOcc != "0"))
+                    {
+                        olColDateRDV.RemoveAt(columnNum);
+                        break;
+                    }
+
+                    if (((columnNum > int.Parse(strNbOcc) && dlDateFinValid.Year.ToString() == "2000")
+                    || ((olColDateRDV[columnNum] > dlDateFinValid && string.IsNullOrEmpty(strOccSouhaitjour))
+                    || (olColDateRDV[columnNum] == dlDateCour)
+                    || ((dlDateFinValid.Year.ToString() != "2000") && strNbOcc != "0" && olColDateRDV[columnNum] > dlDateFinValid)))
+                    && olColDateRDV.Count() > 1)
+                    {
+                        olColDateRDV.RemoveAt(columnNum);
+                    }
+                    else
+                    {
+
+                        ListItem listItem = DemandeRv.AddItem(itemInfo);
+
+                        for (int ExcelcolumnNum = 0; ExcelcolumnNum <= checkExcelColumnInfo.strNomColonneNameExcel.Count - 1; ExcelcolumnNum++)
+                        {
+
+                            if (((checkExcelColumnInfo.strGroupement[ExcelcolumnNum].ToString() != "") && (checkExcelColumnInfo.boolTraite[ExcelcolumnNum] != true) && (checkExcelColumnInfo.boolIndicateurException[ExcelcolumnNum] != true))
+                                || (checkExcelColumnInfo.strGroupement[ExcelcolumnNum].ToString() == "") && (checkExcelColumnInfo.boolIndicateurException[ExcelcolumnNum] != true))
+                            {
+                                if (checkExcelColumnInfo.strGroupement[ExcelcolumnNum].ToString() != "")
+                                {
+                                    listItem[checkExcelColumnInfo.strNomColonneSharePoint[ExcelcolumnNum].ToString()] = InitColonneValeursTraitees(checkExcelColumnInfo.strGroupement[ExcelcolumnNum].ToString(), checkExcelColumnInfo.strFormatage[ExcelcolumnNum].ToString(), ExcelcolumnNum);
+                                    if (blValeurGroupementIsNUll == true)
+                                    {
+                                        listItem[checkExcelColumnInfo.strNomColonneSharePoint[ExcelcolumnNum].ToString()] = "";
+                                    }
+                                }
+                                else
+                                {
+                                    if (string.IsNullOrEmpty(checkExcelColumnInfo.strMasque.ToString()) != true)
+                                    {
+                                        listItem[checkExcelColumnInfo.strNomColonneSharePoint[ExcelcolumnNum].ToString()] = GetText(checkExcelColumnInfo.strValeur[ExcelcolumnNum].ToString(), checkExcelColumnInfo.strType[ExcelcolumnNum].ToString());
+                                    }
+                                    else
+                                    {
+                                        listItem[checkExcelColumnInfo.strNomColonneSharePoint[ExcelcolumnNum].ToString()] = InitMasque(checkExcelColumnInfo.strValeur[ExcelcolumnNum].ToString(), checkExcelColumnInfo.strMasque[ExcelcolumnNum].ToString());
+                                    }
+                                }
+                            }
+                        }
+
+                        // Initialise traité groupement à false
+                        InitTraiteeFalse();
+                        dlDateCour = DateTime.Parse(olColDateRDV[columnNum].ToString().Replace("00:00:00", "13:00:00"));
+
+                        // Récupère la Date Souhaitée
+                        listItem["Datesouhaite"] = DateTime.Parse(GetText(dlDateCour.ToString(), "D"));
+
+                        // Récupère la date de fin de Rendez-vous
+                        if ((strNbOcc.ToString() != "0") || (string.IsNullOrEmpty(strOccSouhaitFinJourDate) != true))
+                        {
+                            listItem["DateFin"] = DateTime.Parse(GetText(dlOccSouhaitFinJourDate.ToString().Replace("00:00:00", "13:00:00"), "D"));
+                        }
+
+                        // Récupère le numéro de confirmation
+                        if ((strNbOcc.ToString() == "0") && string.IsNullOrEmpty(strOccSouhaitFinJourDate))
+                        {
+                            listItem["NumeroCofirmation"] = strnoConfirmation.Substring(12, (strnoConfirmation.Length - 12));
+                        }
+                        else
+                        {
+                            listItem["NumeroCofirmation"] = strnoConfirmation.Substring(12, (strnoConfirmation.Length - 12)) + "-" + intCpt.ToString();
+                        }
+
+                        // Si c'est le premier Rendez-vous
+                        if (intCpt == 1)
+                        {
+                            listItem["Demandeprincipale"] = "true";
+                        }
+                        else
+                        {
+                            listItem["Demandeprincipale"] = "false";
+                        }
+
+                        // trace de debug Yves InsertTableLogChargement("ConnecteurISP", "La date souhaitée est :: " + listItem["Datesouhaite"].ToString());
+
+                        listItem.Update();
+
+                        try
+                        {
+                            ctx.ExecuteQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            //MessageBox.Show(ex.Message);
+                            blErreurExecution = true;
+                            InsertTableLogJobConnecteur("ctx.ExecuteQuery()", ex.Message.ToString());
+                        }
+                    }
+                }
+            }
+            void ctx_MixedAuthRequest(object sender, WebRequestEventArgs e)
+            {
+                try
+                {
+                    //Add the header that tells SharePoint to use Windows authentication.
+                    e.WebRequestExecutor.RequestHeaders.Add(
+                    "X-FORMS_BASED_AUTH_ACCEPTED", "f");
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show("Error setting authentication header: " + ex.Message);
+                    blErreurExecution = true;
+                    InsertTableLogJobConnecteur("ctx_MixedAuthRequest()", ex.Message.ToString());
+                }
+            }
+        }
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+    }
+}]]></ProjectItem>
+          <ProjectItem
+            Name="Project"
+            Encoding="UTF16LE"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>ST_b106497acf0c4279b8034508dc713b01</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>ST_b106497acf0c4279b8034508dc713b01</msb:DisplayName>
+    <msb:ProjectId>{278E65C5-2B18-4D84-96E2-3568DDDE0F03}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="ST_b106497acf0c4279b8034508dc713b01.csproj" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+    <msb:File Include="ScriptMain.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\AssemblyInfo.cs"
+            Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_b106497acf0c4279b8034508dc713b01")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_b106497acf0c4279b8034508dc713b01")]
+[assembly: AssemblyCopyright("Copyright @  2023")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Settings.settings"
+            Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+          <ProjectItem
+            Name="Properties\Resources.Designer.cs"
+            Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b106497acf0c4279b8034508dc713b01.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b106497acf0c4279b8034508dc713b01.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_b106497acf0c4279b8034508dc713b01.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace ST_b106497acf0c4279b8034508dc713b01.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ST_b106497acf0c4279b8034508dc713b01.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}]]></ProjectItem>
+          <BinaryItem
+            Name="ST_b106497acf0c4279b8034508dc713b01.dll">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
+AAAEexcAAARvKQAABhEL/gZbAAAGc1EAAApvUgAACgwCezsAAAR7FwAABG8xAAAGCBELe0IAAAR7
+PgAABBELe0EAAARvTwAACm8SAAAKb1sAAAoRC3tBAAAEEwoRCxEKF1h9QQAABBELe0EAAAQRC3tC
+AAAEez4AAARvWgAAChdZPkP///8CKFUAAAYGez4AAARvXAAACjqr+///3gwRBywHEQdvXQAACtwG
+ez4AAARvXgAAChEFbyQAAAoqAns7AAAEF30RAAAEAnLpBgBwA28SAAAKKFEAAAYqAEE0AAAAAAAA
+MAAAAAkAAAA5AAAAJwAAABEAAAECAAAAEgEAAFwEAABuBQAADAAAAAAAAAATMAQAGAEAAAAAAAAC
+ezsAAARzJAAABiVzJwAACm8RAAAGJXMnAAAKbxMAAAYlcygAAApvFQAABiVzJwAACm8XAAAGJXMo
+AAAKbxkAAAYlcycAAApvGwAABiVzJwAACm8dAAAGJXMpAAAKbx8AAAYlcykAAApvIQAABiVzJwAA
+Cm8jAAAGfRYAAAQCezsAAARzOwAABiVzJwAACm8mAAAGJXMnAAAKbygAAAYlcycAAApvKgAABiVz
+JwAACm8sAAAGJXMnAAAKby4AAAYlcygAAApvMAAABiVzJwAACm8yAAAGJXMnAAAKbzQAAAYlcykA
+AApvNgAABiVzKQAACm84AAAGJXMnAAAKbzoAAAZ9FwAABAJ7OwAABHMnAAAKfRUAAAQqEzADAGIA
+AAAGAAARBAorQwJ7OwAABHsWAAAEbxYAAAYGb1UAAApvEgAACgNvEgAACiguAAAKLBcCezsAAAR7
+FgAABG8gAAAGBhdvXwAACgYXWAoGAns7AAAEexYAAARvEAAABm9gAAAKF1kxoyoAABMwBAAyAQAA
+CQAAEXKRAgBwCgULOPcAAAACezsAAAR7FwAABG8rAAAGB29VAAAKbxIAAAoDbxIAAAooLgAACjnI
+AAAAAns7AAAEexcAAARvMQAABgdvVQAACm8SAAAKAns7AAAEexcAAARvOQAABgdvVQAACm8SAAAK
+KAQAAAYKBigrAAAKLA4CezsAAAQXfRIAAAQrDAJ7OwAABBZ9EgAABAZyEQcAcHLDAgBwby8AAApv
+EgAACgoEchUHAHACezsAAAR7FwAABG8vAAAGB29WAAAKDBICKD0AAAooIwAACgZvEgAACm8vAAAK
+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
+AAAKLU0RDREPb34AAAoRDCiAAAAKLTsSCSg8AAAKExASECg9AAAKcvUDAHAoPgAACiw3CXJ6FQBw
+KD4AAAosKhENEQ9vfgAAChEJKH8AAAosGBENKAMAACsXMQ4RDREPb30AAAo48AMAAAcIb4EAAAoT
+ERYTEjhQAgAAAns7AAAEexcAAARvKwAABhESb1UAAApvEgAACnKRAgBwKD4AAAosMgJ7OwAABHsX
+AAAEbzcAAAYREm9YAAAKLRkCezsAAAR7FwAABG81AAAGERJvWAAACixHAns7AAAEexcAAARvKwAA
+BhESb1UAAApvEgAACnKRAgBwKC4AAAo5xQEAAAJ7OwAABHsXAAAEbzUAAAYREm9YAAAKOqkBAAAC
+ezsAAAR7FwAABG8rAAAGERJvVQAACm8SAAAKcpECAHAoPgAACjmgAAAAERECezsAAAR7FwAABG8n
+AAAGERJvVQAACm8SAAAKAgJ7OwAABHsXAAAEbysAAAYREm9VAAAKbxIAAAoCezsAAAR7FwAABG8t
+AAAGERJvVQAACm8SAAAKERIoSQAABm+CAAAKAns7AAAEexIAAAQ5CwEAABERAns7AAAEexcAAARv
+JwAABhESb1UAAApvEgAACnKRAgBwb4IAAAo43gAAAAJ7OwAABHsXAAAEbzkAAAZvEgAACigrAAAK
+LWIREQJ7OwAABHsXAAAEbycAAAYREm9VAAAKbxIAAAoCezsAAAR7FwAABG8xAAAGERJvVQAACm8S
+AAAKAns7AAAEexcAAARvMwAABhESb1UAAApvEgAACigFAAAGb4IAAAorYBERAns7AAAEexcAAARv
+JwAABhESb1UAAApvEgAACgJ7OwAABHsXAAAEbzEAAAYREm9VAAAKbxIAAAoCezsAAAR7FwAABG85
+AAAGERJvVQAACm8SAAAKKAQAAAZvggAAChESF1gTEhESAns7AAAEexcAAARvKQAABm9gAAAKF1k+
+kv3//wIoSgAABhENEQ9vfgAAChMTEhMoZwAACnKfAgBwcrECAHBvLwAACiiDAAAKEwwREXJ+FQBw
+EgwoZwAACnKXAgBwKAUAAAYogwAACowPAAABb4IAAAoJbxIAAApyehUAcCg+AAAKLQkRBigrAAAK
+LTYREXKYFQBwEgsoZwAACnKfAgBwcrECAHBvLwAACnKXAgBwKAUAAAYogwAACowPAAABb4IAAAoJ
+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
+lRPmAKkB7xTtAFkB6BA4ACQAjgb9AHkALQwDAXkAYBMJAXkAxRUPASQA3BS9AHkAlQwPAXkAMRC9
+AJkBDww4AFkBxRWrAKkA8BAGAMEB7wcbAcEBjxUkASkB8BAqAUkB8BAGAIEBEgZKAdEAVxNQAeEB
+3BS9ANkBoA1WAekBoA1dAdEAOhAGAPEBrAkGAMEAvgZiAfkBORUQAPkB5AhnAdkAYxBuAQkCoA1z
+AQwA1xJ4ASwA8BCEAQwAhRWKAQkCNQiUAQwAjgb9AAwAoA2ZARQAoA2ZARQAjgb9ABwAoA2ZARwA
+jgb9AAkC5hS9AAwAqQ2fAQkCiQamARECrAkGAAkCpgkGABwAqQ2fAQwA3BS9ANkA8BC5AQkCoA1d
+ASEC8BDAASECYxDHAVkBcRPbAVkBGAzhAXkADww4APkBqRW9ADECUBOdADEC1gnyATEC8Av3AVkB
+cRMLAvEA8BATAjkC8BAQAEECohIbAjkCkhIhAjkC1wYoAvkA8BAQADQA8BCEAWEC9RRiAmECEAdu
+AkECwBJ1AmECkhJ7AvkARQaCAnkCRhOIAoECBgiOAgkB8BAGAHkAeBOVAiQAaBMBACQAoA2ZAXkA
+9A0PAXkAuRUPAQEBsg2kAhEBqQ2tAnkAtAmzAhEBugkGAGECnBUGABkB/RC+ApEC+hLEAqECjgbK
+Ag4ABADrAg4ACACzAw4ADADsAw4AEABZBA4AFAAHBQgAxACnBQgAyACsBSkAewDdBi4ACwC1Bi4A
+EwC+Bi4AGwDdBi4AIwDmBi4AKwAPBy4AMwAPBy4AOwAPBy4AQwDmBi4ASwAVBy4AUwAPBy4AWwAs
+B0MAYwCsBUkAewDdBmMAcwCsBYAAawCsBaAAawCsBcAAawCsBeAAawCsBQABawCsBQMBawCsBSMB
+awCsBUMBawCsBWMBawCsBYMBawCsBUEDawCsBSIAfQCYAKcAtwDGAMoAMgGqAbABzQHVAecB7QH9
+AS4CuQIDAAEABAADAAUABAAGAA4AAACbEIwGAABPCZIGAACfE5gGAAD5DJ0GAADEFJ0GAAB1DqUG
+AAByFJ0GAABJFKUGAACKB50GAAAECZ0GAACHD60GAADwCa0GAADBC50GAAD5DJ0GAADEFJ0GAADH
+DJ0GAAByFJ0GAACKB50GAABJFKUGAAAxEZ0GAAAECZ0GAACHD60GAADwCa0GAADBC50GAgAKAAMA
+AgALAAUAAQAMAAUAAgANAAcAAgAQAAkAAQARAAkAAgASAAsAAQATAAsAAgAUAA0AAQAVAA0AAgAW
+AA8AAQAXAA8AAgAYABEAAQAZABEAAgAaABMAAQAbABMAAgAcABUAAQAdABUAAgAeABcAAQAfABcA
+AgAgABkAAQAhABkAAgAiABsAAQAjABsAAgAlAB0AAQAmAB0AAgAnAB8AAQAoAB8AAgApACEAAQAq
+ACEAAgArACMAAQAsACMAAgAtACUAAQAuACUAAgAvACcAAQAwACcAAgAxACkAAQAyACkAAgAzACsA
+AQA0ACsAAgA1AC0AAQA2AC0AAgA3AC8AAQA4AC8AAgA5ADEAAQA6ADEAhgCMAJIA3wB+AVkCBIAA
+AAEAAACQJWNWAAAAAAAAwQAAAAQAAAAAAAAAAAAAANACTQYAAAAAEQAAAAAAAAAAAAAA2QI7DAAA
+AAAEAAAAAAAAAAAAAADQAhwGAAAAAAQAAAAAAAAAAAAAANACyQ0AAAAAEAAAAAAAAAAAAAAA4gK2
+EwAAAAAQAAAAAAAAAAAAAADiAmYIAAAAABEAAAAAAAAAAAAAANkC6wUAAAAABAAAAAAAAAAAAAAA
+0AIbCQAAAAAAAAAAAQAAAKgRAAAFAAIABgACAAcAAgAIAAIACQACAAoAAgALAAIADAACAGkA+QBp
+ABcBaQCfAgAAAAAAPFRyYWl0ZUNvbm5lY3RldXI+Z19fTG9hZENoYXJnZW1lbnRGaWNoaWVyc0V4
+dGVybmVzfDEwADxUcmFpdGVDb25uZWN0ZXVyPmdfX1RyYWl0ZUV4Y2VwdGlvbnwyMAA8PjlfXzI2
+XzMwADxUcmFpdGVDb25uZWN0ZXVyPmJfXzI2XzMwADw+Y19fRGlzcGxheUNsYXNzMjZfMAA8VHJh
+aXRlQ29ubmVjdGV1cj5nX19SZWFkRGF0YUV4Y2VsfDAAU1RfYjEwNjQ5N2FjZjBjNDI3OWI4MDM0
+NTA4ZGM3MTNiMDEAPFRyYWl0ZUNvbm5lY3RldXI+Z19fTG9hZERvc3NpZXJBcmNoaXZlfDExADxU
+cmFpdGVDb25uZWN0ZXVyPmdfX2N0eF9NaXhlZEF1dGhSZXF1ZXN0fDIxADw+Y19fRGlzcGxheUNs
+YXNzMjZfMQBJRW51bWVyYWJsZWAxAFByZWRpY2F0ZWAxAEV2ZW50SGFuZGxlcmAxAExpc3RgMQBD
+UyQ8PjhfX2xvY2FsczEAPFRyYWl0ZUNvbm5lY3RldXI+Z19fSW5pdFRyYWl0ZWVDb3JyZXNwb25k
+YW5jZXwxADxUcmFpdGVDb25uZWN0ZXVyPmdfX0luc2VydFRhYmxlTG9nQ2hhcmdlbWVudHwxMgA8
+VHJhaXRlQ29ubmVjdGV1cj5iX18yMgBJbnQzMgA8PmNfX0Rpc3BsYXlDbGFzczI2XzIAQ1MkPD44
+X19sb2NhbHMyADxUcmFpdGVDb25uZWN0ZXVyPmdfX0luaXRDb2xvbm5lVHJhaXRlZXwyADxUcmFp
+dGVDb25uZWN0ZXVyPmdfX05vSm91clNlbXwyNl8xMwA8VHJhaXRlQ29ubmVjdGV1cj5iX18yMwA8
+PmNfX0Rpc3BsYXlDbGFzczI2XzMAPFRyYWl0ZUNvbm5lY3RldXI+Z19fSW5pdENvbG9ubmVWYWxl
+dXJzVHJhaXRlZXN8MwA8VHJhaXRlQ29ubmVjdGV1cj5nX19DYWxjdWxlckZhY3RldXJGcmVxdWVu
+Y2V8MjZfMTQAPD45X18yNl8yNAA8VHJhaXRlQ29ubmVjdGV1cj5iX18yNl8yNAA8VHJhaXRlQ29u
+bmVjdGV1cj5nX19Jbml0TWFzcXVlfDI2XzQAPFRyYWl0ZUNvbm5lY3RldXI+Z19fSW5zZXJ0VGFi
+bGVMb2dKb2JDb25uZWN0ZXVyfDE1ADw+OV9fMjZfMjUAPFRyYWl0ZUNvbm5lY3RldXI+Yl9fMjZf
+MjUAPFRyYWl0ZUNvbm5lY3RldXI+Z19fSW5pdFRyYWl0ZWVGYWxzZXw1ADxUcmFpdGVDb25uZWN0
+ZXVyPmdfX0luc2VydFRhYmxlTG9nSm9iSVNQfDE2ADw+OV9fMjZfMjYAPFRyYWl0ZUNvbm5lY3Rl
+dXI+Yl9fMjZfMjYAPFRyYWl0ZUNvbm5lY3RldXI+Z19fTG9hZENvcnJlc3BvbmRhbmNlfDYAPFRy
+YWl0ZUNvbm5lY3RldXI+Z19fRGVwbGFjZXJGaWNoaWVyfDE3ADw+OV9fMjZfMjcAPFRyYWl0ZUNv
+bm5lY3RldXI+Yl9fMjZfMjcAPFRyYWl0ZUNvbm5lY3RldXI+Z19fR2V0VGV4dHwyNl83ADxUcmFp
+dGVDb25uZWN0ZXVyPmdfX0VtYWlsX1NlbmR8MTgAPD45X18yNl8yOAA8VHJhaXRlQ29ubmVjdGV1
+cj5iX18yNl8yOAA8VHJhaXRlQ29ubmVjdGV1cj5nX19EZWxldGVUYWJsZUxvZ0NoYXJnZW1lbnR8
+OAA8VHJhaXRlQ29ubmVjdGV1cj5nX19DYWxjdWxlckRhdGVzUkRWfDI2XzE5ADw+OV9fMjZfMjkA
+PFRyYWl0ZUNvbm5lY3RldXI+Yl9fMjZfMjkAPD45ADxUcmFpdGVDb25uZWN0ZXVyPmdfX0RlbGV0
+ZVRhYmxlTG9nSm9iQ2hhcmdlbWVudHw5ADxNb2R1bGU+AFN5c3RlbS5JTwBNaWNyb3NvZnQuU3Fs
+U2VydmVyLk1hbmFnZWREVFMAdmFsdWVfXwBHZXRTY2hlbWEAU3lzdGVtLkRhdGEAU3lzdGVtLkRh
+dGEuT2xlRGIAcGR0RGF0ZURlYgBnZXRfV2ViAG1zY29ybGliAG9TdGFydEpvYgA8PmMAcGludE5i
+T2NjAFN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljAFJlYWQAQWRkAFN5c3RlbS5Db2xsZWN0aW9u
+cy5TcGVjaWFsaXplZABPbGVEYkNvbW1hbmQAQ3JlYXRlQ29tbWFuZABTcWxDb21tYW5kAFNlbmQA
+UmVwbGFjZQB0YmxDb3JyZXNwb25kYW5jZQBkZWZhdWx0SW5zdGFuY2UAb1VzZXJDb2RlAHNldF9B
+dXRoZW50aWNhdGlvbk1vZGUAQ2xpZW50QXV0aGVudGljYXRpb25Nb2RlAGdldF9NZXNzYWdlAE1h
+aWxNZXNzYWdlAHBFcnJldXJNZXNzYWdlAGdldF9zdHJGb3JtYXRhZ2UAc2V0X3N0ckZvcm1hdGFn
+ZQBwc3RyRm9ybWF0YWdlAENyZWRlbnRpYWxDYWNoZQBEYXRhVGFibGUAc3RyU3FsVGFibGUAVmFy
+aWFibGUARW51bWVyYWJsZQBJRGlzcG9zYWJsZQBSdW50aW1lVHlwZUhhbmRsZQBHZXRUeXBlRnJv
+bUhhbmRsZQBGaWxlAEdldEJ5VGl0bGUAZ2V0X05hbWUAc3RyR3JvdXBlTmFtZQBnZXRfVXNlck5h
+bWUAR2V0TmFtZQBEYXRlVGltZQBNaWNyb3NvZnQuU3FsU2VydmVyLkR0cy5SdW50aW1lAE1pY3Jv
+c29mdC5TaGFyZVBvaW50LkNsaWVudC5SdW50aW1lAG9SZXBlcnRvaXJlTm9uQ29uZm9ybWUAcEFk
+cmVzc2VOb25Db25mb3JtZQBvQWRyZXNzZUZpY2hpZXJOb25Db25mb3JtZQBnZXRfTmV3TGluZQBu
+ZXdMaW5lAHNldF9Db21tYW5kVHlwZQBnZXRfc3RyVHlwZQBzZXRfc3RyVHlwZQBwbm9tUmVwZXJ0
+b2lyZQBTeXN0ZW0uQ29yZQBGYWlsdXJlAGdldF9DdWx0dXJlAHNldF9DdWx0dXJlAHJlc291cmNl
+Q3VsdHVyZQBWU1RBUlRTY3JpcHRPYmplY3RNb2RlbEJhc2UASW50ZXJuYWxEYXRhQ29sbGVjdGlv
+bkJhc2UAQXBwbGljYXRpb25TZXR0aW5nc0Jhc2UAQ2xvc2UARGlzcG9zZQBQYXJzZQBVcGRhdGUA
+RWRpdG9yQnJvd3NhYmxlU3RhdGUARGVsZXRlAGdldF9ib29sVHJhaXRlAHNldF9ib29sVHJhaXRl
+AENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUA
+RGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRs
+ZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRy
+aWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25B
+dHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RB
+dHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdFRhc2tFbnRyeVBv
+aW50QXR0cmlidXRlAEFzc2VtYmx5Q29tcGFueUF0dHJpYnV0ZQBSdW50aW1lQ29tcGF0aWJpbGl0
+eUF0dHJpYnV0ZQBnZXRfVmFsdWUAdmFsdWUAZ2V0X3N0ck1hc3F1ZQBzZXRfc3RyTWFzcXVlAHBz
+dHJNYXNxdWUAb1JlcGVydG9pcmVBcmNoaXZlAHRibERvc3NpZXJBcmNoaXZlAE1vdmUAU3lzdGVt
+LlJ1bnRpbWUuVmVyc2lvbmluZwBUb1N0cmluZwBTdWJzdHJpbmcAZ2V0X0xlbmd0aABnZXRfRGF5
+T2ZXZWVrAE1pY3Jvc29mdC5TcWxTZXJ2ZXIuU2NyaXB0VGFzawBNaWNyb3NvZnQuU3FsU2VydmVy
+LkR0cy5UYXNrcy5TY3JpcHRUYXNrAE5ldHdvcmtDcmVkZW50aWFsAG9wX0xlc3NUaGFuT3JFcXVh
+bABnZXRfc3RyTm9tQ29sb25uZU5hbWVFeGNlbABzZXRfc3RyTm9tQ29sb25uZU5hbWVFeGNlbABn
+ZXRfc3RyTm9tQ29sb25uZUV4Y2VsAHNldF9zdHJOb21Db2xvbm5lRXhjZWwAc3RyTm9tRmljaGll
+ckV4Y2VsAFNjcmlwdE9iamVjdE1vZGVsAFN5c3RlbS5Db21wb25lbnRNb2RlbABTeXN0ZW0uTmV0
+Lk1haWwAYmxWYWxldXJHcm91cGVtZW50SXNOVWxsAFNUX2IxMDY0OTdhY2YwYzQyNzliODAzNDUw
+OGRjNzEzYjAxLmRsbABzaXRlVXJsAGdldF9JdGVtAHNldF9JdGVtAEFkZEl0ZW0ATGlzdEl0ZW0A
+c3RySW5kU3lzdGVtAHBjb2x1bW5OdW0ARW51bQByZXNvdXJjZU1hbgBCb29sZWFuAG9wX0dyZWF0
+ZXJUaGFuAE9wZW4AcGR0RGF0ZUZpbgBTY3JpcHRNYWluAHVzZXJsb2dpbgBMaXN0SXRlbUNyZWF0
+aW9uSW5mb3JtYXRpb24AU3lzdGVtLkNvbmZpZ3VyYXRpb24AZ2V0X2ludE9yZHJlVXRpbGlzYXRp
+b24Ac2V0X2ludE9yZHJlVXRpbGlzYXRpb24AU3lzdGVtLkdsb2JhbGl6YXRpb24AcEFjdGlvbgBn
+ZXRfVHJhbnNhY3Rpb24AU3lzdGVtLlJlZmxlY3Rpb24ATmFtZVZhbHVlQ29sbGVjdGlvbgBXZWJI
+ZWFkZXJDb2xsZWN0aW9uAExpc3RDb2xsZWN0aW9uAERhdGFSb3dDb2xsZWN0aW9uAG15U1FMQ29u
+bmVjdGlvbgBPbGVEYkNvbm5lY3Rpb24AQWNxdWlyZUNvbm5lY3Rpb24AU3FsQ29ubmVjdGlvbgBw
+Rm9uY3Rpb24ASU9FeGNlcHRpb24AZ2V0X2Jvb2xJbmRpY2F0ZXVyRXhjZXB0aW9uAHNldF9ib29s
+SW5kaWNhdGV1ckV4Y2VwdGlvbgBibEVycmV1ckV4ZWN1dGlvbgBTeXN0ZW0uRGF0YS5Db21tb24A
+RmlsZUluZm8AQ3VsdHVyZUluZm8ARmlsZVN5c3RlbUluZm8AY2hlY2tFeGNlbENvbHVtbkluZm8A
+ZXhjZWxDb2x1bW5zSW5mbwBEaXJlY3RvcnlJbmZvAHBzdHJGcmVxAFN5c3RlbS5MaW5xAGdldF9Z
+ZWFyAENsZWFyAENoYXIAT2xlRGJEYXRhUmVhZGVyAFNxbERhdGFSZWFkZXIARXhlY3V0ZVJlYWRl
+cgBvbGVFeGNlbFJlYWRlcgBJRm9ybWF0UHJvdmlkZXIAc2VuZGVyAGdldF9SZXNvdXJjZU1hbmFn
+ZXIAQ29ubmVjdGlvbk1hbmFnZXIAcE5vbUZpY2hpZXJDaGFyZ2VyAHBub21GaWNoaWVyAFNjaGVt
+YXNVc2VyAFRvTG93ZXIALmN0b3IALmNjdG9yAGdldF9XZWJSZXF1ZXN0RXhlY3V0b3IAZ2V0X3N0
+clZhbGV1cgBzZXRfc3RyVmFsZXVyAHBzdHJWYWxldXIAVHJhaXRlQ29ubmVjdGV1cgBTeXN0ZW0u
+RGlhZ25vc3RpY3MAU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlcwBjaGVja01lc0NvcnJl
+c3BvbmRhbmNlcwBTeXN0ZW0uUmVzb3VyY2VzAFNUX2IxMDY0OTdhY2YwYzQyNzliODAzNDUwOGRj
+NzEzYjAxLlByb3BlcnRpZXMuUmVzb3VyY2VzLnJlc291cmNlcwBEZWJ1Z2dpbmdNb2RlcwBTVF9i
+MTA2NDk3YWNmMGM0Mjc5YjgwMzQ1MDhkYzcxM2IwMS5Qcm9wZXJ0aWVzAGdldF9WYXJpYWJsZXMA
+R2V0RmlsZXMAdGJsQ2hhcmdlbWVudEZpY2hpZXJzRXh0ZXJuZXMAU2V0dGluZ3MAV2ViUmVxdWVz
+dEV2ZW50QXJncwA8PjRfX3RoaXMASUNyZWRlbnRpYWxzAHNldF9DcmVkZW50aWFscwBnZXRfRGVm
+YXVsdE5ldHdvcmtDcmVkZW50aWFscwBnZXRfRGVmYXVsdENyZWRlbnRpYWxzAENvbnRhaW5zAGdl
+dF9Db25uZWN0aW9ucwBnZXRfQ2hhcnMAZ2V0X1JlcXVlc3RIZWFkZXJzAHBzdHJKb3VycwBjb25u
+ZWN0aW9uQWNjZXNzAFN1Y2Nlc3MAZ2V0X0R0cwBTY3JpcHRSZXN1bHRzAGdldF9MaXN0cwBFeGlz
+dHMAZ2V0X1Jvd3MAQWRkRGF5cwBSZW1vdmVBdABDb25jYXQAUGFyc2VFeGFjdABPYmplY3QAU3lz
+dGVtLk5ldABTcGxpdABnZXRfRGVmYXVsdABzZXRfVGFza1Jlc3VsdABNaWNyb3NvZnQuU2hhcmVQ
+b2ludC5DbGllbnQAU3lzdGVtLkRhdGEuU3FsQ2xpZW50AFNtdHBDbGllbnQAZGVsTG9nSm9iQ2hh
+cmdlbWVudABvUmVwZXJ0b2lyZUNoYXJnZW1lbnQAZGVsTG9nQ2hhcmdlbWVudABnZXRfaW50T3Jk
+cmVHcm91cGVtZW50AHNldF9pbnRPcmRyZUdyb3VwZW1lbnQAZ2V0X3N0ckdyb3VwZW1lbnQAc2V0
+X3N0ckdyb3VwZW1lbnQARW52aXJvbm1lbnQATWFyc2hhbEJ5VmFsdWVDb21wb25lbnQAZ2V0X3N0
+ck5vbUNvbG9ubmVTaGFyZVBvaW50AHNldF9zdHJOb21Db2xvbm5lU2hhcmVQb2ludABnZXRfQ291
+bnQAZ2V0X0ZpZWxkQ291bnQAYWRkX0V4ZWN1dGluZ1dlYlJlcXVlc3QATGlzdABJQ3JlZGVudGlh
+bHNCeUhvc3QAZHREYXRlRGVidXQAcHN0clR4dABzZXRfQ29tbWFuZFRleHQAQ2xpZW50UnVudGlt
+ZUNvbnRleHQAQ2xpZW50Q29udGV4dABnZXRfTm93AERhdGFSb3cAZmlyc3RSb3cARmluZEluZGV4
+AGdldF9Bc3NlbWJseQBFeGVjdXRlUXVlcnkARXhlY3V0ZU5vblF1ZXJ5AG9wX0VxdWFsaXR5AG9w
+X0luZXF1YWxpdHkASXNOdWxsT3JFbXB0eQAAAAAAC1sATQBUAFIAXAAABV0ALgAAJ3kAeQB5AHkA
+LQBNAE0ALQBkAGQAIABoAGgAOgBtAG0AOgBzAHMAAR9VAHMAZQByADoAOgBFAG4AdgBvAHkAZQBQ
+AGEAcgAAIVUAcwBlAHIAOgA6AFMAZQByAHYAZQByAE4AYQBtAGUAADNVAHMAZQByADoAOgBDAG8A
+bgBuAGUAYwB0AFMAdAByAGkAbgBnAEEAYwBjAGUAcwBzAAAbQwBvAG4AbgBlAGMAdABCAEQAXwBT
+AFEATAAAKVUAcwBlAHIAOgA6AFUAUgBMAF8AUwBoAGEAcgBlAFAAbwBpAG4AdAAAG0MAbwBuAG4A
+ZQBjAHQAZQB1AHIASQBTAFAAAC9jAG8AbgBuAGUAYwB0AGkAbwBuAEEAYwBjAGUAcwBzAC4ATwBw
+AGUAbgAoACkAACdEAOkAYgB1AHQAIABkAHUAIAB0AHIAYQBpAHQAZQBtAGUAbgB0AAENKgAuAHgA
+bABzAHgAAB9SAGUAYQBkAEQAYQB0AGEARQB4AGMAZQBsACgAKQAAJUUAcgByAGUAdQByACAAZgBp
+AGMAaABpAGUAcgAgADoAOgAgAAARSQBuAHMAdQBjAGMA6ABzAAE7RgBpAG4AIABkAHUAIAB0AHIA
+YQBpAHQAZQBtAGUAbgB0ACAAZgBpAGMAaABpAGUAcgAgADoAOgAgAAANUwB1AGMAYwDoAHMAASVU
+AHIAYQBpAHQAZQBDAG8AbgBuAGUAYwB0AGUAdQByACgAKQAAHUUAcgByAGUAdQByACAAcwB5AHMA
+dADoAG0AZQABDWEAdQB0AG8AMAAxAAAjVADiAGMAaABlACAAQQB1AHQAbwBtAGEAdABpAHMA6QBl
+AAEBAANDAAADRAAAA04AABEwADAAOgAwADAAOgAwADAAABExADMAOgAwADAAOgAwADAAAAUnACcA
+AQlOAFUATABMAAARZABpAG0AYQBuAGMAaABlAAARbQBlAHIAYwByAGUAZABpAAARdgBlAG4AZABy
+AGUAZABpAAALbAB1AG4AZABpAAALbQBhAHIAZABpAAALagBlAHUAZABpAAANcwBhAG0AZQBkAGkA
+AB1DAGgAYQBxAHUAZQAgAHMAZQBtAGEAaQBuAGUAADFUAG8AdQB0AGUAcwAgAGwAZQBzACAAZABl
+AHUAeAAgAHMAZQBtAGEAaQBuAGUAcwAAM1QAbwB1AHQAZQBzACAAbABlAHMAIAB0AHIAbwBpAHMA
+IABzAGUAbQBhAGkAbgBlAHMAADVUAG8AdQB0AGUAcwAgAGwAZQBzACAAcQB1AGEAdAByAGUAIABz
+AGUAbQBhAGkAbgBlAHMAAAkyADAAMAAwAABxUwBUAF8AYgAxADAANgA0ADkANwBhAGMAZgAwAGMA
+NAAyADcAOQBiADgAMAAzADQANQAwADgAZABjADcAMQAzAGIAMAAxAC4AUAByAG8AcABlAHIAdABp
+AGUAcwAuAFIAZQBzAG8AdQByAGMAZQBzAABNcgBlAGMAdQByAHIAZQBuAGMAZQBTAG8AdQBoAGEA
+aQB0AGUAZQBGAGkAbgBPAGMAYwB1AHIAZQBuAGMAZQBzAE4AbwBtAGIAcgBlAAAvcgBlAGMAdQBy
+AHIAZQBuAGMAZQBTAG8AdQBoAGEAaQB0AGUAZQBKAG8AdQByAAAncgBlAGMAdQByAHIAZQBuAGMA
+ZQBTAG8AdQBoAGEAaQB0AGUAZQAAPXIAZQBjAHUAcgByAGUAbgBjAGUAUwBvAHUAaABhAGkAdABl
+AGUARgBpAG4ASgBvAHUAcgBEAGEAdABlAAAdbgBvAEMAbwBuAGYAaQByAG0AYQB0AGkAbwBuAAAb
+ZABhAHQAZQBTAG8AdQBoAGEAaQB0AGUAZQAAHWQAdQByAGUAZQBTAG8AdQBoAGEAaQB0AGUAZQAA
+XVAAcgBvAHYAaQBkAGUAcgA9AE0AaQBjAHIAbwBzAG8AZgB0AC4AQQBDAEUALgBPAEwARQBEAEIA
+LgAxADIALgAwADsARABhAHQAYQAgAFMAbwB1AHIAYwBlAD0AAGE7ACAARQB4AHQAZQBuAGQAZQBk
+ACAAUAByAG8AcABlAHIAdABpAGUAcwA9ACIARQB4AGMAZQBsACAAMQAyAC4AMAA7AEgARABSAD0A
+TgBvADsASQBNAEUAWAA9ADEAIgAAM28AbABlAEUAeABjAGUAbABDAG8AbgBuAGUAYwB0AGkAbwBu
+AC4ATwBwAGUAbgAoACkAAA1UAGEAYgBsAGUAcwAAFVQAQQBCAEwARQBfAE4AQQBNAEUAAB9TAGUA
+bABlAGMAdAAgACoAIABGAHIAbwBtACAAWwAAA10AACdUAHIAYQBpAHQAZQAgAEUAcgByAGUAdQBy
+ACAARQB4AGMAZQBsAAADJwABAyUAAG1TAEUATABFAEMAVAAgACoAIABGAFIATwBNACAAQwBvAHIA
+cgBlAHMAcABvAG4AZABhAG4AYwBlACAAbwByAGQAZQByACAAYgB5ACAATwByAGQAcgBlAFUAdABp
+AGwAaQBzAGEAdABpAG8AbgAAIU8AcgBkAHIAZQBVAHQAaQBsAGkAcwBhAHQAaQBvAG4AAB9OAG8A
+bQBDAG8AbABvAG4AbgBlAEUAeABjAGUAbAAAKU4AbwBtAEMAbwBsAG8AbgBuAGUAUwBoAGEAcgBl
+AFAAbwBpAG4AdAAAE0YAbwByAG0AYQB0AGEAZwBlAAAVRwByAG8AdQBwAGUAbQBlAG4AdAAAH08A
+cgBkAHIAZQBHAHIAbwB1AHAAZQBtAGUAbgB0AAATVAB5AHAAZQBDAGgAYQBtAHAAACdJAG4AZABp
+AGMAYQB0AGUAdQByAEUAeABjAGUAcAB0AGkAbwBuAAANTQBhAHMAcQB1AGUAAClMAG8AYQBkAEMA
+bwByAHIAZQBzAHAAbwBuAGQAYQBuAGMAZQAoACkAAICtRABFAEwARQBUAEUAIABbAFMARABEAE0A
+VQAwADEAXQAuAFsAZABiAG8AXQAuAFsATABvAGcAXwBDAGgAYQByAGcAZQBtAGUAbgB0AF8AQwBv
+AG4AbgBlAGMAdABlAHUAcgBdACAAdwBoAGUAcgBlACAAQQBwAHAAbABpAGMAYQB0AGkAbwBuACAA
+PQAgACcAQwBvAG4AbgBlAGMAdABlAHUAcgBJAFMAUAAnAAEHRQBSAFIAADVEAGUAbABlAHQAZQBU
+AGEAYgBsAGUATABvAGcAQwBoAGEAcgBnAGUAbQBlAG4AdAAoACkAAICfRABFAEwARQBUAEUAIABb
+AFMARABEAE0AVQAwADEAXQAuAFsAZABiAG8AXQAuAFsATABvAGcAXwBKAG8AYgBfAEMAbwBuAG4A
+ZQBjAHQAZQB1AHIAXQAgAHcAaABlAHIAZQAgAEEAcABwAGwAaQBjAGEAdABpAG8AbgAgAD0AIAAn
+AEMAbwBuAG4AZQBjAHQAZQB1AHIASQBTAFAAJwABO0QAZQBsAGUAdABlAFQAYQBiAGwAZQBMAG8A
+ZwBKAG8AYgBDAGgAYQByAGcAZQBtAGUAbgB0ACgAKQAAPUwAbwBhAGQAQwBoAGEAcgBnAGUAbQBl
+AG4AdABGAGkAYwBoAGkAZQByAHMARQB4AHQAZQByAG4AZQBzAACAx1MARQBMAEUAQwBUACAAKgAg
+AEYAUgBPAE0AIABDAGgAYQByAGcAZQBtAGUAbgB0AEYAaQBjAGgAaQBlAHIAcwBFAHgAdABlAHIA
+bgBlAHMAIAB3AGgAZQByAGUAIABOAG8AbQBEAGUAcwB0AGkAbgBhAHQAaQBvAG4AIAA9ACAAJwBM
+AGkAcwB0AGUAIABkAGUAcwAgAGQAZQBtAGEAbgBkAGUAcwAgAGQAZQAgAFIAZQBuAGQAZQB6AC0A
+dgBvAHUAcwAnAAEvQwBoAGUAbQBpAG4ARgBpAGMAaABpAGUAcgBDAGgAYQByAGcAZQBtAGUAbgB0
+AAAjQwBoAGUAbQBpAG4ARgBpAGMAaABpAGUAcgBMAGkA6QBzAAE1QwBvAHUAcgByAGkAZQBsAEYA
+aQBjAGgAaQBlAHIATgBvAG4AQwBvAG4AZgBvAHIAbQBlAABBTABvAGEAZABDAGgAYQByAGcAZQBt
+AGUAbgB0AEYAaQBjAGgAaQBlAHIAcwBFAHgAdABlAHIAbgBlAHMAKAApAAAlTABvAGEAZABEAG8A
+cwBzAGkAZQByAEEAcgBjAGgAaQB2AGUAADlTAEUATABFAEMAVAAgACoAIABGAFIATwBNACAARABv
+AHMAcwBpAGUAcgBBAHIAYwBoAGkAdgBlAAAbQwBoAGUAbQBpAG4AQQByAGMAaABpAHYAZQAAI0MA
+aABlAG0AaQBuAE4AbwBuAEMAbwBuAGYAbwByAG0AZQAAKUwAbwBhAGQARABvAHMAcwBpAGUAcgBB
+AHIAYwBoAGkAdgBlACgAKQAAgKFpAG4AcwBlAHIAdAAgAGkAbgB0AG8AWwBTAEQARABNAFUAMAAx
+AF0ALgBbAGQAYgBvAF0ALgBbAEwAbwBnAF8AQwBoAGEAcgBnAGUAbQBlAG4AdABfAEMAbwBuAG4A
+ZQBjAHQAZQB1AHIAXQAgAHYAYQBsAHUAZQBzACgAJwBDAG8AbgBuAGUAYwB0AGUAdQByAEkAUwBQ
+ACcALAAgACcAAQknACwAIAAnAAFZJwAsACAARwBFAFQARABBAFQARQAoACkALAAgACcAQQB1AHQA
+bwAwADEAJwAsACAAJwBUAOIAYwBoAGUAIABBAHUAdABvAG0AYQB0AGkAcwDpAGUAJwApAAE1SQBu
+AHMAZQByAHQAVABhAGIAbABlAEwAbwBnAEMAaABhAHIAZwBlAG0AZQBuAHQAKAApAAAHLgAuAC4A
+AIDTaQBuAHMAZQByAHQAIABpAG4AdABvAFsAUwBEAEQATQBVADAAMQBdAC4AWwBkAGIAbwBdAC4A
+WwBMAG8AZwBfAEoAbwBiAF8AQwBvAG4AbgBlAGMAdABlAHUAcgBdACAAdgBhAGwAdQBlAHMAKAAn
+AEMAbwBuAG4AZQBjAHQAZQB1AHIASQBTAFAAJwAsACAAJwBJAFMAUAAnACwAIAAnAEUAeABjAGUA
+bAAgAHYAZQByAHMAIABTAGgAYQByAGUAUABvAGkAbgB0ACcALAAgACcAAR0nACwAIAAnAEUAcgBy
+AGUAdQByACcALAAgACcAAS8nACwAIAAnAEEAdQB0AG8AMAAxACcALAAgAEcARQBUAEQAQQBUAEUA
+KAApACkAAVlJAG0AcABvAHMAcwBpAGIAbABlACAAZAAnAGkAbgBzAOkAcgBlAHIAIABkAGEAbgBz
+ACAATABvAGcAXwBKAG8AYgBfAEMAbwBuAG4AZQBjAHQAZQB1AHIAAXFpAG4AcwBlAHIAdAAgAGkA
+bgB0AG8AIABMAG8AZwBfAEoAbwBiAHMAIAB2AGEAbAB1AGUAcwAoACcAQQB1AHQAbwAwADEAJwAs
+ACAAJwBDAG8AbgBuAGUAYwB0AGUAdQByAEkAUwBQACcALAAgACcAAR0nACwAIABuAHUAbABsACwA
+IABuAHUAbABsACkAAVdJAG0AcABvAHMAcwBpAGIAbABlACAAZAAnAGkAbgBzAOkAcgBlAHIAIABk
+AGEAbgBzACAATABvAGcAXwBKAG8AYgBzACAAKABBAGMAYwBlAHMAcwApAAEjRABlAHAAbABhAGMA
+ZQByAEYAaQBjAGgAaQBlAHIAKAApAACApUwAJwBhAHAAcABsAGkAYwBhAHQAaQBvAG4AIAAoAEMA
+bwBuAG4AZQBjAHQAZQB1AHIAIABJAFMAUAApACAAYQAgAHUAbgAgAEYAaQBjAGgAaQBlAHIAIABu
+AG8AbgAgAGMAbwBuAGYAbwByAG0AZQAgAC0AIABSAGUAbgBkAGUAegAtAHYAbwB1AHMAIABTAGgA
+YQByAGUAUABvAGkAbgB0ACAAARFCAG8AbgBqAG8AdQByACwAAGNNAGUAcgBjAGkAIABkACcAYQBw
+AHAAbABpAHEAdQBlAHIAIABsAGUAcwAgAGMAbwByAHIAZQBjAHQAaQBmAHMAIABzAGkAIABjACcA
+ZQBzAHQAIABsAGUAIABjAGEAcwAuAAGA6VAAbwB1AHIAIAB0AG8AdQB0AGUAcwAgAHEAdQBlAHMA
+dABpAG8AbgBzACwAIAB2AGUAdQBpAGwAbABlAHoAIABjAG8AbQBtAHUAbgBpAHEAdQBlAHIAIABh
+AHYAZQBjACAAbABhACAAXwBCAG8A7gB0AGUAIABDAGUAbgB0AHIAZQAgAGQAZQAgAHAAaQBsAG8A
+dABhAGcAZQAgAFIAQgBRACAAYwBlAG4AdAByAGUALgBkAGUALgBwAGkAbABvAHQAYQBnAGUAQABy
+AGIAcQAuAGcAbwB1AHYALgBxAGMALgBjAGEALgABV0QAaQByAGUAYwB0AGkAbwBuACAAZABlAHMA
+IAB0AGUAYwBoAG4AbwBsAG8AZwBpAGUAcwAgAGQAZQAgAGwAJwBpAG4AZgBvAHIAbQBhAHQAaQBv
+AG4AATdSAOkAZwBpAGUAIABkAHUAIABiAOIAdABpAG0AZQBuAHQAIABkAHUAIABRAHUA6QBiAGUA
+YwABW0MAZQAgAGYAaQBjAGgAaQBlAHIAIABkAGUAIAByAGUAbgBkAGUAegAtAHYAbwB1AHMAIABl
+AHMAdAAgAG4AbwBuACAAYwBvAG4AZgBvAHIAbQBlACAAOgAgAAEDLgAAd0MAZQAgAHIAZQBuAGQA
+ZQB6AC0AdgBvAHUAcwAgAG4AJwBhACAAcABhAHMAIADpAHQA6QAgAGkAbQBwAG8AcgB0AOkAIABk
+AGEAbgBzACAAbAAnAG8AdQB0AGkAbAAgAFMAaABhAHIAZQBwAG8AaQBuAHQALgABW0kAbAAgAGEA
+IADpAHQA6QAgAGQA6QBwAG8AcwDpACAAZABhAG4AcwAgAGwAZQAgAHIA6QBwAGUAcgB0AG8AaQBy
+AGUAIABzAHUAaQB2AGEAbgB0ACAAOgAgAAEhVQBzAGUAcgA6ADoAUwBtAHQAcABTAGUAcgB2AGUA
+cgAAFVMAZQBuAGQATQBhAGkAbAAoACkAAB9UAHIAYQBpAHQAZQBFAHgAYwBlAHAAdABpAG8AbgAA
+Q0wAaQBzAHQAZQAgAGQAZQBzACAAZABlAG0AYQBuAGQAZQBzACAAZABlACAAUgBlAG4AZABlAHoA
+LQB2AG8AdQBzAAEVZABkAC8ATQBNAC8AeQB5AHkAeQAAFTAAMQAvADAAMQAvADIAMAAwADAAAAMw
+AAAZRABhAHQAZQBzAG8AdQBoAGEAaQB0AGUAAA9EAGEAdABlAEYAaQBuAAAjTgB1AG0AZQByAG8A
+QwBvAGYAaQByAG0AYQB0AGkAbwBuAAADLQABI0QAZQBtAGEAbgBkAGUAcAByAGkAbgBjAGkAcABh
+AGwAZQAACXQAcgB1AGUAAAtmAGEAbABzAGUAACVjAHQAeAAuAEUAeABlAGMAdQB0AGUAUQB1AGUA
+cgB5ACgAKQAAN1gALQBGAE8AUgBNAFMAXwBCAEEAUwBFAEQAXwBBAFUAVABIAF8AQQBDAEMARQBQ
+AFQARQBEAAEDZgAALWMAdAB4AF8ATQBpAHgAZQBkAEEAdQB0AGgAUgBlAHEAdQBlAHMAdAAoACkA
+AAAA6h2ULwh/e0yXg956Mz2avwAEIAEBCAMgAAEFIAEBEREEIAEBDgYgAQERgJ0FIAASgKkVBwoS
+JA4RPRJFEkkdEk0IEk0SRRJFAyAADgYAAw4ODg4EAAARPQQgAQ4OBSAAEoCxBiABEoC1HAMgABwF
+IAASgLkGIAESgL0cBCABHBwGIAEdEk0OBQACDg4OBAcBET0DAAAOBRUSQQEOBRUSQQEIBRUSQQEC
+BAcCDggEAAECDgQAAQgOAwcBDgUAAgIODgUgAg4ODgUHAwgIAwMgAAgEIAEDCAMHAQgUBwkVEkEB
+ET0dDhE9ET0IHQgICAgGFRJBARE9BiABHQ4dAwsQAQEIFRKA2QEeAAMKAQ4FIAEBEwAFIAARgN0F
+IAERPQ0HAAICET0RPQMKAQgIAAESgOERgOUFIAASgOkHIAIBDhKA6RcHDBIoDggSaRJtEmESRRJx
+EnESLAgSMAUgARJpDgUgABKA7QYgARKA9QgEIAEcDgQgABJtBiABARGBAQQgABJxBCABHAgFIAEC
+EwAFFRJdAQ4FIAIBHBgJIAEIFRJdARMABCABDggFIAETAAgGIAIBCBMAAyAAAgUHAw4ICAgHAxJt
+EnESRQYgAgEOEmEGIAIBDhJlBSAAEoEVBwcDDhJxEkUFBwIOEkUFAAEOHQ4FIAIOCAgFBwIOET0E
+BwESdQQAAQEOBQACAQ4ODQcJDg4ODg4ODhJ5EkUHAAQODg4ODgcgBAEODg4OBQAAEoElBiABARKB
+KQUgAQESeSoHFRJ9EoCBEoCFDg4ODg4RPRE9ET0RPRE9FRJBARE9CAgIEoCJCBE9EkUIFRKBLQES
+gI0LIAEBFRKBLQESgI0GIAEBEYE1BQAAEoE5BiABARKBOQUgABKBPQUgABKBQQYgARKAgQ4JAAMR
+PQ4OEoFFBAoBET0IIAESgIkSgIUFIAIBDhwFAAERPQ4EBwESRQUgABKBSQUgABKBTQUgAgEODgi3
+elxWGTTgiQiJhF3NgIDMkQhx6bzhEelCnIDGUwBFAEwARQBDAFQAIAAqACAARgBSAE8ATQAgAEMA
+aABhAHIAZwBlAG0AZQBuAHQARgBpAGMAaABpAGUAcgBzAEUAeAB0AGUAcgBuAGUAcwAgAHcAaABl
+AHIAZQAgAE4AbwBtAEQAZQBzAHQAaQBuAGEAdABpAG8AbgAgAD0AIAAnAEwAaQBzAHQAZQAgAGQA
+ZQBzACAAZABlAG0AYQBuAGQAZQBzACAAZABlACAAUgBlAG4AZABlAHoALQB2AG8AdQBzACcAOFMA
+RQBMAEUAQwBUACAAKgAgAEYAUgBPAE0AIABEAG8AcwBzAGkAZQByAEEAcgBjAGgAaQB2AGUAbFMA
+RQBMAEUAQwBUACAAKgAgAEYAUgBPAE0AIABDAG8AcgByAGUAcwBwAG8AbgBkAGEAbgBjAGUAIABv
+AHIAZABlAHIAIABiAHkAIABPAHIAZAByAGUAVQB0AGkAbABpAHMAYQB0AGkAbwBuAICsRABFAEwA
+RQBUAEUAIABbAFMARABEAE0AVQAwADEAXQAuAFsAZABiAG8AXQAuAFsATABvAGcAXwBDAGgAYQBy
+AGcAZQBtAGUAbgB0AF8AQwBvAG4AbgBlAGMAdABlAHUAcgBdACAAdwBoAGUAcgBlACAAQQBwAHAA
+bABpAGMAYQB0AGkAbwBuACAAPQAgACcAQwBvAG4AbgBlAGMAdABlAHUAcgBJAFMAUAAnAICeRABF
+AEwARQBUAEUAIABbAFMARABEAE0AVQAwADEAXQAuAFsAZABiAG8AXQAuAFsATABvAGcAXwBKAG8A
+YgBfAEMAbwBuAG4AZQBjAHQAZQB1AHIAXQAgAHcAaABlAHIAZQAgAEEAcABwAGwAaQBjAGEAdABp
+AG8AbgAgAD0AIAAnAEMAbwBuAG4AZQBjAHQAZQB1AHIASQBTAFAAJwAEAAAAAAQBAAAAAgYOAgYC
+AwYRPQYGFRJBAQ4DBhIUAwYSGAQGEoCVBAYSgJkDBhIQBgYVEkEBCAYGFRJBAQICBggDBhEcAwYS
+IAYGFRJdAQ4DBhIIAwYSYQMGEmUDBhJxAwYSKA8ABRUSQQERPQgRPRE9Dg4FAAASgJUFAAASgJkG
+AAEBEoCZBAAAEhADAAABByAAFRJBAQ4IIAEBFRJBAQ4HIAAVEkEBCAggAQEVEkEBCAcgABUSQQEC
+CCABARUSQQECBCABAg4FIAIBDggGIAMODg4IBiADAQ4ODgcgAgEcEoCNBQgAEoCVBQgAEoCZBAgA
+EhAHKAAVEkEBDgcoABUSQQEIBygAFRJBAQIIAQAIAAAAAAAeAQABAFQCFldyYXBOb25FeGNlcHRp
+b25UaHJvd3MBCAEAAgAAAAAAKAEAI1NUX2IxMDY0OTdhY2YwYzQyNzliODAzNDUwOGRjNzEzYjAx
+AAAFAQAAAAAWAQARQ29weXJpZ2h0IEAgIDIwMjMAAE0BABwuTkVURnJhbWV3b3JrLFZlcnNpb249
+djQuNy4yAQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRQuTkVUIEZyYW1ld29yayA0LjcuMgAAtAAA
+AM7K774BAAAAkQAAAGxTeXN0ZW0uUmVzb3VyY2VzLlJlc291cmNlUmVhZGVyLCBtc2NvcmxpYiwg
+VmVyc2lvbj00LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2
+MTkzNGUwODkjU3lzdGVtLlJlc291cmNlcy5SdW50aW1lUmVzb3VyY2VTZXQCAAAAAAAAAAAAAABQ
+QURQQURQtAAAAPiNAAAAAAAAAAAAABKOAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEjgAAAAAA
+AAAAAAAAAF9Db3JEbGxNYWluAG1zY29yZWUuZGxsAAAAAAD/JQAgABAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABABAAAAAYAACAAAAAAAAAAAAAAAAAAAABAAEAAAAwAACAAAAAAAAAAAAA
+AAAAAAABAAAAAABIAAAAWKAAABoEAAAAAAAAAAAAABoENAAAAFYAUwBfAFYARQBSAFMASQBPAE4A
+XwBJAE4ARgBPAAAAAAC9BO/+AAABAAAAAQBjVpAlAAABAGNWkCU/AAAAAAAAAAQAAAACAAAAAAAA
+AAAAAAAAAAAARAAAAAEAVgBhAHIARgBpAGwAZQBJAG4AZgBvAAAAAAAkAAQAAABUAHIAYQBuAHMA
+bABhAHQAaQBvAG4AAAAAAAAAsAR6AwAAAQBTAHQAcgBpAG4AZwBGAGkAbABlAEkAbgBmAG8AAABW
+AwAAAQAwADAAMAAwADAANABiADAAAAAaAAEAAQBDAG8AbQBtAGUAbgB0AHMAAAAAAAAAIgABAAEA
+QwBvAG0AcABhAG4AeQBOAGEAbQBlAAAAAAAAAAAAcAAkAAEARgBpAGwAZQBEAGUAcwBjAHIAaQBw
+AHQAaQBvAG4AAAAAAFMAVABfAGIAMQAwADYANAA5ADcAYQBjAGYAMABjADQAMgA3ADkAYgA4ADAA
+MwA0ADUAMAA4AGQAYwA3ADEAMwBiADAAMQAAAD4ADwABAEYAaQBsAGUAVgBlAHIAcwBpAG8AbgAA
+AAAAMQAuADAALgA5ADYAMQA2AC4AMgAyADEAMQA1AAAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwA
+TgBhAG0AZQAAAFMAVABfAGIAMQAwADYANAA5ADcAYQBjAGYAMABjADQAMgA3ADkAYgA4ADAAMwA0
+ADUAMAA4AGQAYwA3ADEAMwBiADAAMQAuAGQAbABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkA
+cgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBoAHQAIABAACAAIAAyADAAMgAzAAAAKgABAAEATABl
+AGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMAAAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwA
+RgBpAGwAZQBuAGEAbQBlAAAAUwBUAF8AYgAxADAANgA0ADkANwBhAGMAZgAwAGMANAAyADcAOQBi
+ADgAMAAzADQANQAwADgAZABjADcAMQAzAGIAMAAxAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUA
+YwB0AE4AYQBtAGUAAAAAAFMAVABfAGIAMQAwADYANAA5ADcAYQBjAGYAMABjADQAMgA3ADkAYgA4
+ADAAMwA0ADUAMAA4AGQAYwA3ADEAMwBiADAAMQAAAEIADwABAFAAcgBvAGQAdQBjAHQAVgBlAHIA
+cwBpAG8AbgAAADEALgAwAC4AOQA2ADEANgAuADIAMgAxADEANQAAAAAARgAPAAEAQQBzAHMAZQBt
+AGIAbAB5ACAAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AOQA2ADEANgAuADIAMgAxADEANQAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA
+AAwAAAAkPgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
+        </ScriptProject>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="185,42"
+          Id="Package\ConnecteurIspIntegre"
+          TopLeft="428,172" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

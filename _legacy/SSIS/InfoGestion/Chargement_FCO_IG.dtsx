@@ -1,0 +1,881 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/5/2023 2:56:03 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="PVPB542-040033"
+  DTS:CreatorName="MTR\tyeo01"
+  DTS:DTSID="{C4F437D8-78F2-4629-BDC3-031F24DEA303}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="3084"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{1A7CA1AB-4185-42E1-8A1F-FFDCBD5B41BE}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SDGIC01]"
+      DTS:CreationName="OLEDB"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{EE41A659-41AF-407E-949F-E856796B0B43}"
+      DTS:ObjectName="SDGIC01">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=W367P002RPT1\W367P002RPT1B01;Initial Catalog=SDGIC01;Provider=SQLNCLI11.1;Integrated Security=SSPI;Packet Size=32767;Application Name=SSIS-CHARGEMENT_GLOBAL_IG-{EE41A659-41AF-407E-949F-E856796B0B43}SDGIC01;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SiebelDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{71C5957C-BF1F-44BC-BCBF-FE8DB9E2C7C1}"
+      DTS:ObjectName="SiebelDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=W367P001SQL03\W367P001SQL03B1;Initial Catalog=siebeldb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Packet Size=32767;Application Name=SSIS-CHARGEMENT_GLOBAL_IG-{71C5957C-BF1F-44BC-BCBF-FE8DB9E2C7C1}SiebelDB;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Conteneur de séquences"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Conteneur de séquences"
+      DTS:DTSID="{1051DBC8-CF47-4174-AD21-5AFFBB987290}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Conteneur de séquences">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de séquences\Delete Table"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{C60305C1-6807-4E26-B427-CA15D6F34573}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Delete Table"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{EE41A659-41AF-407E-949F-E856796B0B43}"
+              SQLTask:SqlStatementSource="  DELETE FROM [GI3_HEUR_FCO_INTL]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Conteneur de séquences\Heures FCO"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{A9D1CB86-6E5C-4022-8866-2C28E6DB907D}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Heures FCO"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="GI3_HEUR_FCO_INTL"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[dbo].[GI3_HEUR_FCO_INTL]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[SDGIC01]"
+                      connectionManagerRefId="Package.ConnectionManagers[SDGIC01]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="332"
+                          cachedName="GI3_C_ROWD_HEUR_FCO_INTL"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_ROWD_HEUR_FCO_INTL]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_C_ROWD_INTL]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="GI3_C_ROWD_INTL"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_ROWD_INTL]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_ROWD_INTL]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_C_PERD]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="GI3_C_PERD"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_PERD]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_PERD]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_NB_HEUR_FAIR]"
+                          cachedDataType="numeric"
+                          cachedName="GI3_NB_HEUR_FAIR"
+                          cachedPrecision="22"
+                          cachedScale="10"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_NB_HEUR_FAIR]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_NB_HEUR_FAIR]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_NB_HEUR_DECL]"
+                          cachedDataType="numeric"
+                          cachedName="GI3_NB_HEUR_DECL"
+                          cachedPrecision="22"
+                          cachedScale="10"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_NB_HEUR_DECL]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_NB_HEUR_DECL]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_C_DOMN]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="300"
+                          cachedName="GI3_C_DOMN"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_DOMN]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_DOMN]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_IDEN_PERD]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="GI3_IDEN_PERD"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_IDEN_PERD]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_IDEN_PERD]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_I_REGIE]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="GI3_I_REGIE"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_I_REGIE]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_REGIE]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_I_CMEQ]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="GI3_I_CMEQ"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_I_CMEQ]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_CMEQ]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_I_CMMTQ]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="1"
+                          cachedName="GI3_I_CMMTQ"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_I_CMMTQ]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_CMMTQ]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_IDEN_DOMN]"
+                          cachedCodepage="1252"
+                          cachedDataType="str"
+                          cachedLength="15"
+                          cachedName="GI3_IDEN_DOMN"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_IDEN_DOMN]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_IDEN_DOMN]" />
+                        <inputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].Columns[GI3_N_SEQ_DOMN]"
+                          cachedDataType="numeric"
+                          cachedName="GI3_N_SEQ_DOMN"
+                          cachedPrecision="10"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_N_SEQ_DOMN]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_N_SEQ_DOMN]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          length="332"
+                          name="GI3_C_ROWD_HEUR_FCO_INTL" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_ROWD_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="GI3_C_ROWD_INTL" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="GI3_C_PERD" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          length="300"
+                          name="GI3_C_DOMN" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_NB_HEUR_FAIR]"
+                          dataType="numeric"
+                          name="GI3_NB_HEUR_FAIR"
+                          precision="22"
+                          scale="7" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_NB_HEUR_DECL]"
+                          dataType="numeric"
+                          name="GI3_NB_HEUR_DECL"
+                          precision="22"
+                          scale="7" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_IDEN_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="GI3_C_IDEN_PERD" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_I_REGIE]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="GI3_I_REGIE" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_I_CMEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="GI3_I_CMEQ" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_I_CMMTQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="GI3_I_CMMTQ" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_C_IDEN_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="GI3_C_IDEN_DOMN" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input].ExternalColumns[GI3_N_SEQ_DOMN]"
+                          dataType="numeric"
+                          name="GI3_N_SEQ_DOMN"
+                          precision="10" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE"
+                  componentClassID="Microsoft.OLEDBSource"
+                  contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+                  description="OLE DB Source"
+                  name="V_GI_FCO_INFO_GENE"
+                  usesDispositions="true"
+                  version="7">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset"></property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 
+	   [ROW_ID]				GI3_C_ROWD_HEUR_FCO_INTL
+      ,[CONTACT_ID]			GI3_C_ROWD_INTL
+      ,[PERIODE_ID]			GI3_IDEN_PERD
+      ,[PERIODE_NOM]		GI3_C_PERD
+      ,[NB_HR]				GI3_NB_HEUR_FAIR
+      ,[NB_HR_DECLAREES]	GI3_NB_HEUR_DECL
+      --,[FLAG_NB_HR_OVER]
+      ,[DOMAINE]			GI3_C_DOMN
+      ,[REGIE_IND]			GI3_I_REGIE
+      ,[CMEQ_IND]			GI3_I_CMEQ
+      ,[CMMTQ_IND]			GI3_I_CMMTQ
+      --,[SCATS]
+      ,[DOMAINE_ID]			GI3_IDEN_DOMN
+      ,[DOMAINE_SEQ]		GI3_N_SEQ_DOMN
+      --,[SCATS_ENU]
+FROM [dbo].[V_GI_FCO_INFO_GENE]</property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">2</property>
+                    <property
+                      dataType="System.String"
+                      description="The mappings between the parameters in the SQL command and variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[SiebelDB]"
+                      connectionManagerRefId="Package.ConnectionManagers[SiebelDB]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output]"
+                      name="OLE DB Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          length="332"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          name="GI3_C_ROWD_HEUR_FCO_INTL"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_ROWD_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_ROWD_INTL]"
+                          length="15"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_ROWD_INTL]"
+                          name="GI3_C_ROWD_INTL"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_PERD]"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_PERD]"
+                          name="GI3_C_PERD"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_NB_HEUR_FAIR]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_NB_HEUR_FAIR]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_NB_HEUR_FAIR]"
+                          name="GI3_NB_HEUR_FAIR"
+                          precision="22"
+                          scale="10"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_NB_HEUR_DECL]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_NB_HEUR_DECL]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_NB_HEUR_DECL]"
+                          name="GI3_NB_HEUR_DECL"
+                          precision="22"
+                          scale="10"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_DOMN]"
+                          length="300"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_C_DOMN]"
+                          name="GI3_C_DOMN"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_IDEN_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_IDEN_PERD]"
+                          length="15"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_IDEN_PERD]"
+                          name="GI3_IDEN_PERD"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_REGIE]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_I_REGIE]"
+                          length="1"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_REGIE]"
+                          name="GI3_I_REGIE"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_CMEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_I_CMEQ]"
+                          length="1"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_CMEQ]"
+                          name="GI3_I_CMEQ"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_CMMTQ]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_I_CMMTQ]"
+                          length="1"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_I_CMMTQ]"
+                          name="GI3_I_CMMTQ"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_IDEN_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_IDEN_DOMN]"
+                          length="15"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_IDEN_DOMN]"
+                          name="GI3_IDEN_DOMN"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_N_SEQ_DOMN]"
+                          dataType="numeric"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_N_SEQ_DOMN]"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].Columns[GI3_N_SEQ_DOMN]"
+                          name="GI3_N_SEQ_DOMN"
+                          precision="10"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          length="332"
+                          name="GI3_C_ROWD_HEUR_FCO_INTL" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_ROWD_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="GI3_C_ROWD_INTL" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          name="GI3_C_PERD" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_NB_HEUR_FAIR]"
+                          dataType="numeric"
+                          name="GI3_NB_HEUR_FAIR"
+                          precision="22"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_NB_HEUR_DECL]"
+                          dataType="numeric"
+                          name="GI3_NB_HEUR_DECL"
+                          precision="22"
+                          scale="10" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_C_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          length="300"
+                          name="GI3_C_DOMN" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_IDEN_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="GI3_IDEN_PERD" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_I_REGIE]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="GI3_I_REGIE" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_I_CMEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="GI3_I_CMEQ" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_I_CMMTQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          name="GI3_I_CMMTQ" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_IDEN_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          name="GI3_IDEN_DOMN" />
+                        <externalMetadataColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output].ExternalColumns[GI3_N_SEQ_DOMN]"
+                          dataType="numeric"
+                          name="GI3_N_SEQ_DOMN"
+                          precision="10" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output]"
+                      isErrorOut="true"
+                      name="OLE DB Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          length="332"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_ROWD_HEUR_FCO_INTL]"
+                          name="GI3_C_ROWD_HEUR_FCO_INTL" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_ROWD_INTL]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_ROWD_INTL]"
+                          name="GI3_C_ROWD_INTL" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_IDEN_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_IDEN_PERD]"
+                          name="GI3_IDEN_PERD" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_PERD]"
+                          codePage="1252"
+                          dataType="str"
+                          length="30"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_PERD]"
+                          name="GI3_C_PERD" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_NB_HEUR_FAIR]"
+                          dataType="numeric"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_NB_HEUR_FAIR]"
+                          name="GI3_NB_HEUR_FAIR"
+                          precision="22"
+                          scale="10" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_NB_HEUR_DECL]"
+                          dataType="numeric"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_NB_HEUR_DECL]"
+                          name="GI3_NB_HEUR_DECL"
+                          precision="22"
+                          scale="10" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          length="300"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_C_DOMN]"
+                          name="GI3_C_DOMN" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_I_REGIE]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_I_REGIE]"
+                          name="GI3_I_REGIE" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_I_CMEQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_I_CMEQ]"
+                          name="GI3_I_CMEQ" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_I_CMMTQ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="1"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_I_CMMTQ]"
+                          name="GI3_I_CMMTQ" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_IDEN_DOMN]"
+                          codePage="1252"
+                          dataType="str"
+                          length="15"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_IDEN_DOMN]"
+                          name="GI3_IDEN_DOMN" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_N_SEQ_DOMN]"
+                          dataType="numeric"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[GI3_N_SEQ_DOMN]"
+                          name="GI3_N_SEQ_DOMN"
+                          precision="10" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Conteneur de séquences\Heures FCO.Paths[OLE DB Source Output]"
+                  endId="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL.Inputs[OLE DB Destination Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE.Outputs[OLE DB Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte]"
+          DTS:CreationName=""
+          DTS:DTSID="{20766A7E-BFA0-4C09-A4C0-7401D1889CF3}"
+          DTS:From="Package\Conteneur de séquences\Delete Table"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Contrainte"
+          DTS:To="Package\Conteneur de séquences\Heures FCO" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Conteneur de séquences\Delete Table"
+          TopLeft="34,35" />
+        <NodeLayout
+          Size="141,42"
+          Id="Package\Conteneur de séquences\Heures FCO"
+          TopLeft="249,38" />
+        <EdgeLayout
+          Id="Package\Conteneur de séquences.PrecedenceConstraints[Contrainte]"
+          TopLeft="175,57.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="74,0"
+              Start="0,0"
+              End="66.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="66.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="556,154"
+          Size="556,197"
+          Id="Package\Conteneur de séquences"
+          TopLeft="75,64" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Conteneur de séquences\Heures FCO">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="203,42"
+          Id="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE"
+          TopLeft="66,53" />
+        <NodeLayout
+          Size="193,42"
+          Id="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL"
+          TopLeft="73,171" />
+        <EdgeLayout
+          Id="Package\Conteneur de séquences\Heures FCO.Paths[OLE DB Source Output]"
+          TopLeft="168.5,95">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76"
+              Start="0,0"
+              End="0,68.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de séquences\Heures FCO\GI3_HEUR_FCO_INTL">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Conteneur de séquences\Heures FCO\V_GI_FCO_INFO_GENE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

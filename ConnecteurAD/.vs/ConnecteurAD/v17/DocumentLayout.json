@@ -1,0 +1,48 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "T:\\Applications\\Intelligence_numerique\\RBQ_Dev\\ConnecteurAD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2905CD5D-479A-45FC-96A5-E0D3EE415C01}|ConnecteurAD\\ConnecteurAD.dtproj|T:\\Applications\\Intelligence_numerique\\RBQ_Dev\\ConnecteurAD\\ConnecteurAD\\ConnecteurADIntegre.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{2905CD5D-479A-45FC-96A5-E0D3EE415C01}|ConnecteurAD\\ConnecteurAD.dtproj|solutionrelative:ConnecteurAD\\ConnecteurADIntegre.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConnecteurADIntegre.dtsx [Conception]",
+              "DocumentMoniker": "T:\\Applications\\Intelligence_numerique\\RBQ_Dev\\ConnecteurAD\\ConnecteurAD\\ConnecteurADIntegre.dtsx",
+              "RelativeDocumentMoniker": "ConnecteurAD\\ConnecteurADIntegre.dtsx",
+              "ToolTip": "T:\\Applications\\Intelligence_numerique\\RBQ_Dev\\ConnecteurAD\\ConnecteurAD\\ConnecteurADIntegre.dtsx [Conception]",
+              "RelativeToolTip": "ConnecteurAD\\ConnecteurADIntegre.dtsx [Conception]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-05-05T12:57:13.86Z",
+              "EditorCaption": " [Conception]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f4e46f1e-cf83-40aa-b568-a627394bc994}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

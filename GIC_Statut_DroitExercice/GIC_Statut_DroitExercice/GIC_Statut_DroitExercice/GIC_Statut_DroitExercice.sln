@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "GIC_Statut_DroitExercice", "GIC_Statut_DroitExercice\GIC_Statut_DroitExercice.dtproj", "{040F5270-95A2-4815-81FD-56FDFC05B2C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{040F5270-95A2-4815-81FD-56FDFC05B2C4}.Development|Default.ActiveCfg = Development
+		{040F5270-95A2-4815-81FD-56FDFC05B2C4}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4C637593-D44D-46D6-B4F5-DB5A62ED4B7E}
+	EndGlobalSection
+EndGlobal

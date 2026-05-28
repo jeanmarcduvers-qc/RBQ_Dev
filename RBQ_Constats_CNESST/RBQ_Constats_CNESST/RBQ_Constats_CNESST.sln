@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "RBQ_Constats_CNESST", "RBQ_Constats_CNESST\RBQ_Constats_CNESST.dtproj", "{CA2B6F68-1EAC-4F1E-8DDC-D665CD80BECF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA2B6F68-1EAC-4F1E-8DDC-D665CD80BECF}.Development|Default.ActiveCfg = Development
+		{CA2B6F68-1EAC-4F1E-8DDC-D665CD80BECF}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9049BCFA-5272-478C-81CF-FF7EC6CE0355}
+	EndGlobalSection
+EndGlobal

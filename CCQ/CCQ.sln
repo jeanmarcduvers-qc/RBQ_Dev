@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36804.6 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "CCQ", "CCQ\CCQ.dtproj", "{014257B7-229F-4261-A2AF-D503E20F2442}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{014257B7-229F-4261-A2AF-D503E20F2442}.Development|Default.ActiveCfg = Development
+		{014257B7-229F-4261-A2AF-D503E20F2442}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC43CD21-F5EA-4B24-9B0E-5C052B33BCD5}
+	EndGlobalSection
+EndGlobal

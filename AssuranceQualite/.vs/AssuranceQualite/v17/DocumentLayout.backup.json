@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\duvj04\\OneDrive - Gouv Qc\\Documents\\00-RBQ\\DTWR-ETL\\RBQ_Dev\\AssuranceQualite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94A416DD-5B4E-4C53-BC08-A9D603DA2B05}|AssuranceQualite\\AssuranceQualite.dtproj|C:\\Users\\duvj04\\OneDrive - Gouv Qc\\Documents\\00-RBQ\\DTWR-ETL\\RBQ_Dev\\AssuranceQualite\\AssuranceQualite\\AssuranceQualite.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{94A416DD-5B4E-4C53-BC08-A9D603DA2B05}|AssuranceQualite\\AssuranceQualite.dtproj|solutionrelative:AssuranceQualite\\AssuranceQualite.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94A416DD-5B4E-4C53-BC08-A9D603DA2B05}|AssuranceQualite\\AssuranceQualite.dtproj|C:\\Users\\duvj04\\OneDrive - Gouv Qc\\Documents\\00-RBQ\\DTWR-ETL\\RBQ_Dev\\AssuranceQualite\\AssuranceQualite\\AssuranceQualiteIT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{94A416DD-5B4E-4C53-BC08-A9D603DA2B05}|AssuranceQualite\\AssuranceQualite.dtproj|solutionrelative:AssuranceQualite\\AssuranceQualiteIT.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AssuranceQualite.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\duvj04\\OneDrive - Gouv Qc\\Documents\\00-RBQ\\DTWR-ETL\\RBQ_Dev\\AssuranceQualite\\AssuranceQualite\\AssuranceQualite.dtsx",
+              "RelativeDocumentMoniker": "AssuranceQualite\\AssuranceQualite.dtsx",
+              "ToolTip": "C:\\Users\\duvj04\\OneDrive - Gouv Qc\\Documents\\00-RBQ\\DTWR-ETL\\RBQ_Dev\\AssuranceQualite\\AssuranceQualite\\AssuranceQualite.dtsx [Design]",
+              "RelativeToolTip": "AssuranceQualite\\AssuranceQualite.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-29T12:47:45.916Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssuranceQualiteIT.dtsx [Design]",
+              "DocumentMoniker": "C:\\Users\\duvj04\\OneDrive - Gouv Qc\\Documents\\00-RBQ\\DTWR-ETL\\RBQ_Dev\\AssuranceQualite\\AssuranceQualite\\AssuranceQualiteIT.dtsx",
+              "RelativeDocumentMoniker": "AssuranceQualite\\AssuranceQualiteIT.dtsx",
+              "ToolTip": "C:\\Users\\duvj04\\OneDrive - Gouv Qc\\Documents\\00-RBQ\\DTWR-ETL\\RBQ_Dev\\AssuranceQualite\\AssuranceQualite\\AssuranceQualiteIT.dtsx [Design]",
+              "RelativeToolTip": "AssuranceQualite\\AssuranceQualiteIT.dtsx [Design]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2026-04-22T18:48:27.206Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

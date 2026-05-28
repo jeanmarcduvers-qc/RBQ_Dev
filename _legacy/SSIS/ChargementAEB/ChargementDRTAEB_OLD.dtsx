@@ -1,0 +1,1245 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/3/2017 9:27:19 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="W366D01SQL2"
+  DTS:CreatorName="MTR\Boug06"
+  DTS:DTSID="{1A84B7B9-1ADA-4D37-9893-F29224B3C624}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1016.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="ChargementDRTAEB"
+  DTS:PackageType="5"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{15914D1E-53FA-40C2-B895-A5787902CAAA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DRT01P1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6A636CC6-B96D-4F36-A4BE-16DC6F30619C}"
+      DTS:ObjectName="DRT01P1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=W366A01SQL2.mtr.intra\W366A01SQL2B02, 60801;Initial Catalog=DRT01P1;Provider=SQLNCLI11;Integrated Security=SSPI;Application Name=SSIS-ChargementDRTAEB-{6A636CC6-B96D-4F36-A4BE-16DC6F30619C}W366A01SQL2.mtr.intra\W366A01SQL2B02, 60801.DRT01P1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[ORACLE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{29724BCC-5325-4088-A803-AA7E1570BCDF}"
+      DTS:ObjectName="ORACLE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=TRDBDFI1;User ID=AEBDRT;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\AEBP09_MUNP"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A1C393B2-F2DE-43A2-8F5F-CC550CA9DB51}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="AEBP09_MUNP"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\AEBP09_MUNP\AEBP09_MUNP"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="AEBP09_MUNP"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">"AEB"."AEBP09_MUNP"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AEBP09_MUNP\AEBP09_MUNP.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ORACLE]"
+                  connectionManagerRefId="Package.ConnectionManagers[ORACLE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].Columns[DR_C_MUNP]"
+                      cachedDataType="numeric"
+                      cachedName="DR_C_MUNP"
+                      cachedPrecision="5"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_MUNP]"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_C_MUNP]" />
+                    <inputColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].Columns[DR_NM_MUNP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="58"
+                      cachedName="DR_NM_MUNP"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_NM_MUNP]"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_NM_MUNP]" />
+                    <inputColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].Columns[DR_C_REGN_ADMN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DR_C_REGN_ADMN"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_REGN_ADMN]"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_C_REGN_ADMN]" />
+                    <inputColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].Columns[DR_S_MUNP]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DR_S_MUNP"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_S_MUNP]"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_S_MUNP]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_MUNP]"
+                      dataType="numeric"
+                      name="DR_C_MUNP"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_NM_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="58"
+                      name="DR_NM_MUNP" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DR_C_REGN_ADMN" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input].ExternalColumns[DR_S_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DR_S_MUNP" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AEBP09_MUNP\AEBP09_MUNP.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AEBP09_MUNP\AEBP09_MUNP.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\AEBP09_MUNP.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AEBP09_MUNP\AEBP09_MUNP.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="DR1_MUNICIPALITE"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 	T.DR_C_MUNP,
+	T.DR_NM_MUNP,
+	R.DR_C_REGN_ADMN,
+	T.DR_S_MUNP 
+FROM 	DR1_MUNICIPALITE T
+		INNER JOIN DR1_REGION_ADMINISTRATIVE R ON R.DR_N_SEQN_REGN_ADMN = T.DR_N_SEQN_REGN_ADMN
+ORDER BY T.DR_C_MUNP</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DRT01P1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DRT01P1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_C_MUNP]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_MUNP]"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_C_MUNP]"
+                      name="DR_C_MUNP"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_NM_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_NM_MUNP]"
+                      length="58"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_NM_MUNP]"
+                      name="DR_NM_MUNP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_REGN_ADMN]"
+                      length="2"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_C_REGN_ADMN]"
+                      name="DR_C_REGN_ADMN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_S_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_S_MUNP]"
+                      length="2"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].Columns[DR_S_MUNP]"
+                      name="DR_S_MUNP"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_MUNP]"
+                      dataType="numeric"
+                      name="DR_C_MUNP"
+                      precision="5" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_NM_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="58"
+                      name="DR_NM_MUNP" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DR_C_REGN_ADMN" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output].ExternalColumns[DR_S_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DR_S_MUNP" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_C_MUNP]"
+                      dataType="numeric"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_C_MUNP]"
+                      name="DR_C_MUNP"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_NM_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="58"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_NM_MUNP]"
+                      name="DR_NM_MUNP" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_C_REGN_ADMN]"
+                      name="DR_C_REGN_ADMN" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_S_MUNP]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[DR_S_MUNP]"
+                      name="DR_S_MUNP" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\AEBP09_MUNP.Paths[OLE DB Source Output]"
+              endId="Package\AEBP09_MUNP\AEBP09_MUNP.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\AEBP09_MUNP\DR1_MUNICIPALITE.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\AEBP10_REGN_ADMN"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{EAF1D4D9-39CE-4F1E-81EF-39CC01392570}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="AEBP10_REGN_ADMN"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="AEBP10_REGN_ADMN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">"AEB"."AEBP10_REGN_ADMN"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ORACLE]"
+                  connectionManagerRefId="Package.ConnectionManagers[ORACLE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input].Columns[DR_C_REGN_ADMN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="2"
+                      cachedName="DR_C_REGN_ADMN"
+                      externalMetadataColumnId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_REGN_ADMN]"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].Columns[DR_C_REGN_ADMN]" />
+                    <inputColumn
+                      refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input].Columns[DR_NM_REGN_ADMN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="60"
+                      cachedName="DR_NM_REGN_ADMN"
+                      externalMetadataColumnId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input].ExternalColumns[DR_NM_REGN_ADMN]"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].Columns[DR_NM_REGN_ADMN]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DR_C_REGN_ADMN" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input].ExternalColumns[DR_NM_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DR_NM_REGN_ADMN" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="DR1_REGION_ADMINISTRATIVE"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT 	T.DR_C_REGN_ADMN AS DR_C_REGN_ADMN,
+	T.DR_NM_REGN_ADMN AS DR_NM_REGN_ADMN
+FROM DR1_REGION_ADMINISTRATIVE T</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DRT01P1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DRT01P1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].Columns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_REGN_ADMN]"
+                      length="2"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].Columns[DR_C_REGN_ADMN]"
+                      name="DR_C_REGN_ADMN"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].Columns[DR_NM_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].ExternalColumns[DR_NM_REGN_ADMN]"
+                      length="60"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].Columns[DR_NM_REGN_ADMN]"
+                      name="DR_NM_REGN_ADMN"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      name="DR_C_REGN_ADMN" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output].ExternalColumns[DR_NM_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      name="DR_NM_REGN_ADMN" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[DR_C_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="2"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[DR_C_REGN_ADMN]"
+                      name="DR_C_REGN_ADMN" />
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[DR_NM_REGN_ADMN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="60"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[DR_NM_REGN_ADMN]"
+                      name="DR_NM_REGN_ADMN" />
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\AEBP10_REGN_ADMN.Paths[OLE DB Source Output]"
+              endId="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\AEBP11_CODE_POST"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{50E81F93-EA7D-4C6A-A355-72F38CF059F4}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="AEBP11_CODE_POST"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server v10; (C) 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          BLOBTempStoragePath=""
+          bufferTempStoragePath=""
+          version="1">
+          <components>
+            <component
+              refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="AEBP11_CODE_POST"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">"AEB"."AEBP11_CODE_POST"</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[ORACLE]"
+                  connectionManagerRefId="Package.ConnectionManagers[ORACLE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input].Columns[DR_V_CODE_POST]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="DR_V_CODE_POST"
+                      externalMetadataColumnId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input].ExternalColumns[DR_V_CODE_POST]"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].Columns[DR_V_CODE_POST]" />
+                    <inputColumn
+                      refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input].Columns[DR_C_MUNP]"
+                      cachedDataType="numeric"
+                      cachedName="DR_C_MUNP"
+                      cachedPrecision="5"
+                      externalMetadataColumnId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_MUNP]"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].Columns[DR_C_MUNP]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input].ExternalColumns[DR_V_CODE_POST]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="DR_V_CODE_POST" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input].ExternalColumns[DR_C_MUNP]"
+                      dataType="numeric"
+                      name="DR_C_MUNP"
+                      precision="5" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SqlServer v10; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="DR1_CODE_POSTAL_MUNICIPALITE_POSTALE"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT T.DR_V_CODE_POST,
+		M.DR_C_MUNP 
+FROM 	DR1_CODE_POSTAL_MUNICIPALITE_POSTALE T
+		INNER JOIN DR1_MUNICIPALITE M ON M.DR_N_SEQN_MUNP = T.DR_N_SEQN_MUNP AND M.DR_N_SEQN_REGN_ADMN IS NOT NULL
+WHERE T.DR_D_SUPP_CODE_POST_MUNC_POST IS NULL
+ORDER BY 1</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DRT01P1]"
+                  connectionManagerRefId="Package.ConnectionManagers[DRT01P1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].Columns[DR_V_CODE_POST]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].ExternalColumns[DR_V_CODE_POST]"
+                      length="6"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].Columns[DR_V_CODE_POST]"
+                      name="DR_V_CODE_POST"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].Columns[DR_C_MUNP]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_MUNP]"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].Columns[DR_C_MUNP]"
+                      name="DR_C_MUNP"
+                      precision="5"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].ExternalColumns[DR_V_CODE_POST]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="DR_V_CODE_POST" />
+                    <externalMetadataColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output].ExternalColumns[DR_C_MUNP]"
+                      dataType="numeric"
+                      name="DR_C_MUNP"
+                      precision="5" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[DR_V_CODE_POST]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[DR_V_CODE_POST]"
+                      name="DR_V_CODE_POST" />
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[DR_C_MUNP]"
+                      dataType="numeric"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[DR_C_MUNP]"
+                      name="DR_C_MUNP"
+                      precision="5" />
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\AEBP11_CODE_POST.Paths[OLE DB Source Output]"
+              endId="Package\AEBP11_CODE_POST\AEBP11_CODE_POST.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\AEBP11_CODE_POST\DR1_CODE_POSTAL_MUNICIPALITE_POSTALE.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\DELETE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E0891B83-4DB6-4391-9E28-2C3579B49B73}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DELETE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; Microsoft SQL Server 2008 R2; © 2007 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{29724BCC-5325-4088-A803-AA7E1570BCDF}"
+          SQLTask:SqlStatementSource="DELETE AEB.AEBP11_CODE_POST&#xA;GO&#xA;DELETE AEB.AEBP09_MUNP&#xA;GO&#xA;DELETE AEB.AEBP10_REGN_ADMN&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{AC275489-2259-429A-8F77-6CB9E1AF37A4}"
+      DTS:From="Package\DELETE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\AEBP10_REGN_ADMN" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{959022AD-9FE8-4403-85CA-2C5A5288F5F5}"
+      DTS:From="Package\AEBP10_REGN_ADMN"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\AEBP09_MUNP" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{9563F728-CBC2-48E2-B250-F4E9332D7530}"
+      DTS:From="Package\AEBP09_MUNP"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\AEBP11_CODE_POST" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\AEBP09_MUNP"
+          TopLeft="5.5,184.216981132075" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\AEBP10_REGN_ADMN"
+          TopLeft="5.5377358490566,88.3679245283019" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\AEBP11_CODE_POST"
+          TopLeft="6.51886792452831,263.122641509434" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\DELETE"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="73.3867924528302,49.4245283018868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0.0377358490565882,38.9433962264151"
+              Start="0,0"
+              End="0.0377358490565882,31.4433962264151">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4716981132075" />
+                  <mssgle:LineSegment
+                    End="0.0377358490565882,19.4716981132075" />
+                  <mssgle:LineSegment
+                    End="0.0377358490565882,31.4433962264151" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="73.4245283018868,132.292452830189">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-0.0377358490565882,51.9245283018868"
+              Start="0,0"
+              End="-0.0377358490565882,44.4245283018868">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9622641509434" />
+                  <mssgle:LineSegment
+                    End="-0.0377358490565882,25.9622641509434" />
+                  <mssgle:LineSegment
+                    End="-0.0377358490565882,44.4245283018868" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="73.3867924528302,228.141509433962">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="1.01886792452831,34.9811320754717"
+              Start="0,0"
+              End="1.01886792452831,27.4811320754717">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.4716981132075" />
+                  <mssgle:LineSegment
+                    End="1.01886792452831,17.4716981132075" />
+                  <mssgle:LineSegment
+                    End="1.01886792452831,27.4811320754717" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\AEBP09_MUNP">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\AEBP09_MUNP\AEBP09_MUNP"
+          TopLeft="5.5,108.330188679245" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\AEBP09_MUNP\DR1_MUNICIPALITE"
+          TopLeft="10.4811320754717,5.5" />
+        <EdgeLayout
+          Id="Package\AEBP09_MUNP.Paths[OLE DB Source Output]"
+          TopLeft="78.3679245283019,49.4245283018868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-4.98113207547169,58.9056603773585"
+              Start="0,0"
+              End="-4.98113207547169,51.4056603773585">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4339622641509" />
+                  <mssgle:LineSegment
+                    End="-4.98113207547169,29.4339622641509" />
+                  <mssgle:LineSegment
+                    End="-4.98113207547169,51.4056603773585" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <TaskHost
+    design-time-name="Package\AEBP10_REGN_ADMN">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="136,44"
+          Id="Package\AEBP10_REGN_ADMN\AEBP10_REGN_ADMN"
+          TopLeft="5.5,153.27358490566" />
+        <NodeLayout
+          Size="136,44"
+          Id="Package\AEBP10_REGN_ADMN\DR1_REGION_ADMINISTRATIVE"
+          TopLeft="7.5,5.5" />
+        <EdgeLayout
+          Id="Package\AEBP10_REGN_ADMN.Paths[OLE DB Source Output]"
+          TopLeft="75.3867924528302,49.4245283018868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-2,103.849056603774"
+              Start="0,0"
+              End="-2,96.3490566037736">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.9245283018868" />
+                  <mssgle:LineSegment
+                    End="-2,51.9245283018868" />
+                  <mssgle:LineSegment
+                    End="-2,96.3490566037736" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

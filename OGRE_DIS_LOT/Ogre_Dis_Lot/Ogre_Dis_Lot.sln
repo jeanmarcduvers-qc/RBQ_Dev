@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33920.266
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "Ogre_Dis_Lot", "Ogre_Dis_Lot\Ogre_Dis_Lot.dtproj", "{9719D141-3B10-4429-8BA9-A3D926B51EEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9719D141-3B10-4429-8BA9-A3D926B51EEE}.Development|Default.ActiveCfg = Development
+		{9719D141-3B10-4429-8BA9-A3D926B51EEE}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {258031D8-C77B-4B84-B37D-E4AA55257F6A}
+	EndGlobalSection
+EndGlobal
