@@ -1,1 +1,7 @@
 *.rdl.data
+# Visual Studio folders
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
