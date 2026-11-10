@@ -19,8 +19,13 @@
           <References />
         </DtsPackage>
         <DtsPackage FormatVersion="8">
-          <Name>Chargement_Global_IG.dtsx</Name>
-          <FullPath>Chargement_Global_IG.dtsx</FullPath>
+          <Name>Chargement_Global_IG_IT.dtsx</Name>
+          <FullPath>Chargement_Global_IG_IT.dtsx</FullPath>
+          <References />
+        </DtsPackage>
+        <DtsPackage FormatVersion="8">
+          <Name>Chargement_Global_IG_Prod.dtsx</Name>
+          <FullPath>Chargement_Global_IG_Prod.dtsx</FullPath>
           <References />
         </DtsPackage>
         <DtsPackage FormatVersion="8">
